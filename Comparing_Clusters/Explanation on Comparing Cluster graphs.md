@@ -1,8 +1,8 @@
-## Explanation on Comparing Cluster graphs
+## Explanation on Comparing Clust-derived Clusters
 
+> Once Clust-derived clusters have been made I wanted to compare the DGE patterns of genes between hosts to help identify relevant processes. This can be done by collating and comparing Clusts.
 
-
-
+###
 
 All long-form data is present in one file with file title `long_clusterdata_[matrixpattern].csv`.
 
@@ -12,7 +12,7 @@ All long-form data is present in one file with file title `long_clusterdata_[mat
 
 ## Forming Comparative Cluster Graphs in R
 
-> Raw R.script is present in Comparing_Clusters/Clustergraphs.R
+> Raw R.script is present in [Differential-Gene-Expression-TCE/Comparing_Clusters](https://github.com/robadgami/Differential-Gene-Expression-TCE/blob/master/Comparing_Clusters/Clustgraphs.R "Clustgraphs.R"). 
 
 
 

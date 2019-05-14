@@ -18,4 +18,4 @@ The data is prepared following the script …….
 
 The cluster datapoints are converted to long-format i.e. with column names "Genes", "value", dpi", "Sample" (this can be done via the terminal).
 
-Then, the cluster graphs can be formed using the R script [Clustergraphs.R](https://github.com/robadgami/Differential-Gene-Expression-TCE/blob/master/R_scripts/Clustgraphs.R) . 
+Then, the cluster graphs can be formed using the R script [Clustergraphs.R](https://github.com/robadgami/Differential-Gene-Expression-TCE/blob/master/Comparing_Clusters/Clustgraphs.R) . 
