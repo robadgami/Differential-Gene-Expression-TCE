@@ -8,10 +8,14 @@ Project Summary: This project focuses on deciphering the host gene expression ch
 
 
 
-## Comparing Cluster patterns between hosts
+##### Comparing cluster patterns between hosts
 
 Once cluster patterns over time for each host has been obtained, interesting molecular process differences can be investigated by comparing DGE pattern clusters between hosts.
 
+The data is prepared following the script …….
 
 
-The cluster graphs can be formed using the R script []
+
+The cluster datapoints are converted to long-format i.e. with column names "Genes", "value", dpi", "Sample" (this can be done via the terminal).
+
+Then, the cluster graphs can be formed using the R script [Clustergraphs.R](https://github.com/robadgami/Differential-Gene-Expression-TCE/blob/master/R_scripts/Clustgraphs.R) . 
