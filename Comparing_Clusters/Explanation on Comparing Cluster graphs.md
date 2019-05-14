@@ -2,7 +2,130 @@
 
 > Once Clust-derived clusters have been made I wanted to compare the DGE patterns of genes between hosts to help identify relevant processes. This can be done by collating and comparing Clusts.
 
-###
+
+
+##Construct datatables of Clust-derived host gene clusters
+
+#### Construct Cluster matrix showing which sample cluster each gene assigns to
+
+Clust-dervied gene lists were manually converted from `.tsv` to `.csv` files as each column corresponded to a cluster of genes for that sample. This layout was converted into an easier-to-process format using `awk ` with columns as "Genes","Cluster:Sample". The final column was added separately. To ensure no duplication, each sample's gene list was sorted `sort -u`.
+
+Now, each sample has a gene list with the genes used by Clust and and its corresponding Cluster for that sample.
+
+```sh
+# make gene.list
+echo "Genes,Cluster:Sample" > $filelocation/cluster_matrix_sample.txt
+awk -F ',' '{print $[column.number], ", [Cluster:Sample]"}'$filelocation/inputfile.csv >> $filelocation/cluster_matrix_[Sample].txt
+
+# sort gene.list layout
+sort -u $filelocation/cluster_matrix_[Sample].txt  > $filelocation/noblank_cluster_matrix_[Sample].txt
+
+```
+
+These individual sample lists were then collated to form a cluster matrix. Not all samples had all the Clust-derived genes. Hence, firstly, `.csv` -formatted columns for each samples were made that encompassed all the genes - if the gene was present in a cluster, its Cluster was listed, else `"NA"` was written.
+
+``` sh
+# construct total gene.list for all samples
+for sample in "[SampleA]" "[SampleB]" "[SampleC]"; do
+cat $filelocation/noblank_cluster_matrix_$sample\.txt >> $filelocation/noblank_cluster_matrix_sample.txt; done &&
+awk -F ',' '{print $1}' $filelocation/noblank_cluster_matrix_sample.txt | sort | uniq > $filelocation/final_noblank_cluster_matrix_F22.txt
+
+# form relevant total gene.list column for each sample
+for sample in "[SampleA]" "[SampleB]" "[SampleC]"; do
+while read line; do
+	if grep -qw $line $filelocation/noblank_cluster_matrix_$sample\.txt;
+	then echo $(grep -w $line $filelocation/noblank_cluster_matrix_$sample\.txt) >> $filelocation/final_cluster_matrix_$sample\.csv;
+	else echo $line ,"NA:"$sample >> $filelocation/final_cluster_matrix_$sample\.csv;
+fi;
+done < $filelocation/final_noblank_cluster_matrix_F22.txt;
+done
+
+# check file lengths are equal
+wc -l $filelocation/final_noblank_cluster_matrix_F22.txt
+wc -l $filelocation/final_cluster_matrix_*.csv
+```
+
+The sample columns were then joined together on R. Once the final cluster matrix was constructed, the total gene.list column for each sample could be removed `rm $filelocation/final_cluster_matrix_\$sample\.csv` and `rm $filelocation/final_noblank_cluster_matrix_F22.txt`.
+
+```R
+library(readr)
+final_cluster_matrix_SampleA <- read_csv("~/file.location/final_cluster_matrix_SampleA.csv")
+final_cluster_matrix_SampleB <- read_csv("~/file.location/final_cluster_matrix_SampleB.csv")
+final_cluster_matrix_SampleC <- read_csv("~/file.location/final_cluster_matrix_SampleC.csv")
+final_cluster_matrix_F22 <- data.frame(final_cluster_matrix_SampleA$Gene, final_cluster_matrix_SampleA$`Cluster:SampleA`,final_cluster_matrix_SampleB$`Cluster:SampleB`, final_cluster_matrix_SampleC$`Cluster:SampleC`)
+colnames(final_cluster_matrix_Sample) <- c("Genes", "Cluster:SampleA", "Cluster:SampleB", "Cluster:SampleC")
+write_csv(final_cluster_matrix_F22, "~/file.location/final_cluster_matrix_F22.csv")
+```
+
+
+
+#### Determine Gene Count for each comparative clust pattern
+
+The number of genes that assign to each comparative clust pattern (e.g. matching genes with column `$2, $3, $4` equal to `Cluster1:SampleA,Cluster1:SampleB,NA:SampleC`) is determined. The column format should be *manually* checked.
+
+``` sh
+head -1 $filelocation/final_cluster_matrix_sample.csv > $filelocation/final_cluster_matrix_sample_genecount.csv &&
+awk -F ',' 'BEGIN{OFS=",";}{print $2, $3, $4}' $filelocation/final_cluster_matrix_sample.csv | sort | uniq -c | sort -r | sed 's/ /,/g' >> $filelocation/final_cluster_matrix_sample_genecount.csv
+```
+
+`uniq -c` = gives the total number lines that are the same for that line content.
+
+`sort -r` = sorts in reverse order (largest-to-smallest).
+
+`sed 's/ /,/g'` = add comma after the gene count number
+
+
+
+#### Construct Clust-derived datapoints for genes IN clusters
+
+
+
+
+
+
+
+To recreate Clust graphs for Clust pattern comparisons, a dataset of points for only Clust-used genes must be formed. 
+
+
+
+
+
+
+
+
+
+Since some genes are present in both high-confidence and low-confidence versions, an `=` will be added at the end to help differentiate.
+
+```sh
+for sample in "[sampleA]" "[sampleB]" "[sampleC]"; do
+sed 's/ ,/=,/' $filelocation/final_Clustpattern_$sample\.csv > $filelocation/temp_final_Clustpattern_$sample\.csv
+sed 's/ ,/=,/' $filelocation/noblank_cluster_matrix_$sample\.txt > $filelocation/temp_noblank_cluster_matrix_$sample\.txt
+awk -F ',' '{print $1}' $filelocation/temp_noblank_cluster_matrix_$sample\.txt | while read line; do
+	grep -e $line $filelocation/temp_final_Clustpattern_$sample\.csv >> $filelocation/temp_final_final_Clust_pattern_$sample\.csv; done;
+wc -l $filelocation/temp_noblank_cluster_matrix_$sample\.txt
+wc -l $filelocation/temp_final_final_Clust_pattern_$sample\.csv;
+done
+
+# if length is as expecte then:
+sed 's/=,/ ,/' $filelocation/temp_final_final_Clust_pattern_$sample\.csv > $filelocation/final_final_Clust_pattern_$sample\.csv
+cat $filelocation/final_final_Clust_pattern_F22_OA.csv $filelocation/final_final_Clust_pattern_F22_SO.csv $filelocation/final_final_Clust_pattern_F22_SA.csv >> $filelocation/identification_final_Clust_pattern_$sample\.csv
+
+rm $filelocation/temp_*
+rm $filelocation/final_final_Clust_pattern_*.csv
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 All long-form data is present in one file with file title `long_clusterdata_[matrixpattern].csv`.
 
