@@ -136,8 +136,8 @@ conda activate stan
 cd anaconda3/lib/python3.7/site-packages/goatools
 python  /Users/rbadgami/anaconda3/bin/find_enrichment.py  --obo /Users/rbadgami/go-basic.obo --pval=0.05  --indent $filelocation/temp_GOlist.txt /Users/rbadgami/Desktop/GOenrichment/refseq-ids-transcriptsclean_altered.txt /Users/rbadgami/Desktop/GOenrichment/GO-association-refseq-transcripts-only_altered.txt > $destinationlocation/association_$pattern\.txt &&
 # make table by removing the first 21 lines and the dots before GO
-tail -n +21 $destinationlocation/association_$pattern\.txt | sed 's/^[^G]*G/G/' > $destinationlocation_table/association_table-$pattern\.txt &&
+tail -n +21 $destinationlocation/association_$pattern\.txt | sed 's/^[^G]*G/G/' > $destinationlocation\_table/association_table-$pattern\.txt &&
 # make table to input into revigo containing "GO", "pfdr"(<0.01)
-head -1 $destinationloction\_table/association_table-$pattern.txt > $destinationlocation_table/pfdr0.01_table-$pattern\.txt &&
-awk -F '\t' '$13 < 0.01' $destinationlocation_table/association_table-$pattern\.txt >> $destinationlocation_table/pfdr0.01_table-$pattern\.txt
+head -1 $destinationlocation\_table/association_table-$pattern\.txt > $destinationlocation\_table/pfdr0.01_table-$pattern\.txt &&
+awk -F '\t' '$13 < 0.01' $destinationlocation\_table/association_table-$pattern\.txt >> $destinationlocation\_table/pfdr0.01_table-$pattern\.txt
 

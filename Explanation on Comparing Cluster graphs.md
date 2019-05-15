@@ -242,14 +242,18 @@ conda activate stan
 cd anaconda3/lib/python3.7/site-packages/goatools
 python  /Users/rbadgami/anaconda3/bin/find_enrichment.py  --obo /Users/rbadgami/go-basic.obo --pval=0.05  --indent $filelocation/temp_GOlist.txt /Users/rbadgami/Desktop/GOenrichment/refseq-ids-transcriptsclean_altered.txt /Users/rbadgami/Desktop/GOenrichment/GO-association-refseq-transcripts-only_altered.txt > $destinationlocation/association_$pattern\.txt &&
 # make table by removing the first 21 lines and the dots before GO
-tail -n +21 $destinationlocation/association_$pattern\.txt | sed 's/^[^G]*G/G/' > $destinationlocation_table/association_table-$pattern\.txt &&
+tail -n +21 $destinationlocation/association_$pattern\.txt | sed 's/^[^G]*G/G/' > $destinationlocation\_table/association_table-$pattern\.txt &&
 # make table to input into revigo containing "GO", "pfdr"(<0.01)
-head -1 $destinationloction\_table/association_table-$pattern\.txt > $destinationlocation_table/pfdr0.01_table-$pattern\.txt &&
-awk -F '\t' '$13 < 0.01' $destinationlocation_table/association_table-$pattern\.txt >> $destinationlocation_table/pfdr0.01_table-$pattern\.txt
+head -1 $destinationlocation\_table/association_table-$pattern\.txt > $destinationlocation\_table/pfdr0.01_table-$pattern\.txt &&
+awk -F '\t' '$13 < 0.01' $destinationlocation\_table/association_table-$pattern\.txt >> $destinationlocation\_table/pfdr0.01_table-$pattern\.txt
 
 ```
 
-Open `$filelocation/clustergraph/GOenrichment/output_GOenrichment_table/pfdr0.01_table-$outputfile.txt` in excel and copy columns "GO" and "pfdr" and input into [REViGO](http://revigo.irb.hr/). Use settings medium similarity (0.7), database wiith GO term sizes (whole UniProt (default)) semantic similarity measure (SimRel).
+Open `$filelocation/clustergraph/GOenrichment/output_GOenrichment_table/pfdr0.01_table-$pattern\.txt` in excel and copy columns "GO" and "pfdr" and input into [REViGO](http://revigo.irb.hr/). Use settings medium similarity (0.7), database wiith GO term sizes (whole UniProt (default)) semantic similarity measure (SimRel).
 
 > More information on REVIGO at: Supek F, Bošnjak M, Škunca N, Šmuc T.  "*REVIGO summarizes and visualizes long lists of Gene Ontology terms"*  PLoS ONE 2011. [doi:10.1371/journal.pone.0021800](http://dx.doi.org/10.1371/journal.pone.0021800)
+
+
+
+Copy REViGO output table into a second sheet in an excel version of the `pfdr0.01_table-$pattern\.txt` file and concatenate. Create a new column titled 'hide' and manually remove (insert "1") any terms that are copied/uninteresting/vague. Make a note of general GOannotation.
 
