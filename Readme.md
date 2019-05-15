@@ -10,7 +10,7 @@ Project Summary: This project focuses on deciphering the host gene expression ch
 
 ##### Comparing cluster patterns between hosts
 
-Once cluster patterns over time for each host has been obtained, interesting molecular process differences can be investigated by comparing DGE pattern clusters between hosts.
+Once cluster patterns over time for each host has been obtained, interesting molecular process differences can be investigated by comparing DGE pattern clusters between hosts. This can be 
 
 The data is prepared following the script …….
 

@@ -78,54 +78,70 @@ awk -F ',' 'BEGIN{OFS=",";}{print $2, $3, $4}' $filelocation/final_cluster_matri
 
 #### Construct Clust-derived datapoints for genes IN clusters
 
-
-
-
-
-
-
 To recreate Clust graphs for Clust pattern comparisons, a dataset of points for only Clust-used genes must be formed. 
 
+Since some genes are present in both high-confidence and low-confidence versions, an `=` will be added at the end to help differentiate HC/LC.
 
+Do this for the comparative cluster pattern matrix...
 
+``` sh
+sed 's/00,/00=,/' $filelocation/final_cluster_matrix_sample.csv > $filelocation/identification_final_cluster_matrix_sample.csv
+```
 
-
-
-
-
-
-Since some genes are present in both high-confidence and low-confidence versions, an `=` will be added at the end to help differentiate.
+… and for each sample's cluster datapoints. If the length is as expected, a summative clust-derived data table is formed.
 
 ```sh
 for sample in "[sampleA]" "[sampleB]" "[sampleC]"; do
-sed 's/ ,/=,/' $filelocation/final_Clustpattern_$sample\.csv > $filelocation/temp_final_Clustpattern_$sample\.csv
-sed 's/ ,/=,/' $filelocation/noblank_cluster_matrix_$sample\.txt > $filelocation/temp_noblank_cluster_matrix_$sample\.txt
+sed 's/00 ,/00=,/' $filelocation/final_Clustpattern_$sample\.csv > $filelocation/temp_final_Clustpattern_$sample\.csv
+sed 's/00 ,/00=,/' $filelocation/noblank_cluster_matrix_$sample\.txt > $filelocation/temp_noblank_cluster_matrix_$sample\.txt
 awk -F ',' '{print $1}' $filelocation/temp_noblank_cluster_matrix_$sample\.txt | while read line; do
-	grep -e $line $filelocation/temp_final_Clustpattern_$sample\.csv >> $filelocation/temp_final_final_Clust_pattern_$sample\.csv; done;
+	grep -e $line $filelocation/temp_final_Clustpattern_$sample\.csv >> $filelocation/temp_final_Clust_pattern_$sample\.csv; done;
 wc -l $filelocation/temp_noblank_cluster_matrix_$sample\.txt
-wc -l $filelocation/temp_final_final_Clust_pattern_$sample\.csv;
+wc -l $filelocation/temp_final_Clust_pattern_$sample\.csv;
 done
 
 # if length is as expecte then:
-sed 's/=,/ ,/' $filelocation/temp_final_final_Clust_pattern_$sample\.csv > $filelocation/final_final_Clust_pattern_$sample\.csv
-cat $filelocation/final_final_Clust_pattern_F22_OA.csv $filelocation/final_final_Clust_pattern_F22_SO.csv $filelocation/final_final_Clust_pattern_F22_SA.csv >> $filelocation/identification_final_Clust_pattern_$sample\.csv
+for sample in "[sampleA]" "[sampleB]" "[sampleC]"; do
+sed 's/=,/ ,/' $filelocation/temp_final_Clust_pattern_$sample\.csv > $filelocation/final_Clust_pattern_$sample\.csv
+cat $filelocation/final_Clust_pattern_$sample\.csv >> $filelocation/identification_final_Clust_pattern_sample.csv
 
 rm $filelocation/temp_*
-rm $filelocation/final_final_Clust_pattern_*.csv
-
+rm $filelocation/final_Clust_pattern_*.csv
 ```
 
 
 
+## Make clust-value table for constructing comparative cluster pattern graphs for a specific pattern
+
+For individual pattern investigation, the following code can be used. It searches for lines from the final comparative cluster pattern matrix for genes that match the pattern (e.g. `"NA:F22_OA,C2:F22_SO,NA:F22_SA"` )  and uses these gene IDs (with `=` after it) and the total clust-derived data table to form a table for graph generation.
+
+``` sh
+grep -e "[pattern]" $filelocation/identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do
+ grep -e $line /Users/rbadgami/Desktop/data2/Cluster_matrix/identification_final_Clust_pattern_F22.csv >> $filelocation/clustergraph/NA-F22_OA_C2-F22_SO_NA-F22_SA.csv; done
+```
+
+To do this for multiple patterns a string of patterns is formed.
+
+``` sh
+for i in [insert a string of patterns] ; do
+	pattern=(echo i | sed 's/:/-/g' | sed 's/,//g' | sed 's/-//g');
+	echo "Genes,1,3,7,11,Sample" > temp_genelist/clusterdatapattern\.csv;
+	grep -e i identification_final_cluster_matrix_sample.csv | awk -F ',' '{print $1}' > $filelocation/temp_genelist/temppattern\_genelist.csv &&
+	while read line; do
+	grep -e line  $filelocation/identification_final_Clust_pattern_sample.csv >> $filelocation/temp_genelist/clusterdata_$pattern.csv;
+done < $filelocation/temp_genelist/temp_$pattern_genelist.csv; done
+
+# a long-form of this data is also made for use in R.
+for files in *.csv ; do
+	echo 'Genes,value,dpi,Sample' > long_data/longfiles &&
+	awk -F ',' 'BEGIN{OFS=",";}{print $1, $2, "1", $6}' files | tail -n +2  >> long_data/longfiles &&
+	awk -F ',' 'BEGIN{OFS=",";}{print $1, $3, "3", $6}' files | tail -n +2 >> long_data/longfiles &&
+	awk -F ',' 'BEGIN{OFS=",";}{print  $1, $4, "7", $6}' files | tail -n +2 >> long_data/longfiles &&
+	awk -F ',' 'BEGIN{OFS=",";}{print  $1, $5,"11", $6}' files | tail -n +2 >> $filelocation/temp_genelist/long_data/long_$files; done
 
 
 
-
-
-
-
-
-
+```
 
 All long-form data is present in one file with file title `long_clusterdata_[matrixpattern].csv`.
 
@@ -206,4 +222,34 @@ These graphs were visually inspected to find interesting comparative clusters be
 
 
 ## Obtaining GOannotation of interesting Comparative Cluster patterns
+
+Once a visually interesting cluster pattern has been selected, it's associated GOannotation can be determined. This step uses the cluster datapoints for each comparative cluster pattern.
+
+First, define the following terms. For each pattern-of-interest, only the term `pattern="…"` needs to be altered.
+
+```sh
+filelocation="/Users/rbadgami/Desktop/data2/Cluster_matrix"
+destinationlocation="/Users/rbadgami/Desktop/data2/Cluster_matrix/clustergraph/GOenrichment/output_GOenrichment"
+pattern="C0_F22_OA_C0_F22_SO_C9_F22_SA"
+```
+
+Then, the following code can be run in the terminal:
+
+``` sh
+# get gene lsit for that pattern
+awk -F ',' 'BEGIN{OFS=",";}{print $1}' $filelocation/temp_genelist/clusterdata_$pattern\.csv | sed 's/=/ /g' | sort -u > $filelocation/temp_GOlist.txt &&
+conda activate stan
+cd anaconda3/lib/python3.7/site-packages/goatools
+python  /Users/rbadgami/anaconda3/bin/find_enrichment.py  --obo /Users/rbadgami/go-basic.obo --pval=0.05  --indent $filelocation/temp_GOlist.txt /Users/rbadgami/Desktop/GOenrichment/refseq-ids-transcriptsclean_altered.txt /Users/rbadgami/Desktop/GOenrichment/GO-association-refseq-transcripts-only_altered.txt > $destinationlocation/association_$pattern\.txt &&
+# make table by removing the first 21 lines and the dots before GO
+tail -n +21 $destinationlocation/association_$pattern\.txt | sed 's/^[^G]*G/G/' > $destinationlocation_table/association_table-$pattern\.txt &&
+# make table to input into revigo containing "GO", "pfdr"(<0.01)
+head -1 $destinationloction\_table/association_table-$pattern\.txt > $destinationlocation_table/pfdr0.01_table-$pattern\.txt &&
+awk -F '\t' '$13 < 0.01' $destinationlocation_table/association_table-$pattern\.txt >> $destinationlocation_table/pfdr0.01_table-$pattern\.txt
+
+```
+
+Open `$filelocation/clustergraph/GOenrichment/output_GOenrichment_table/pfdr0.01_table-$outputfile.txt` in excel and copy columns "GO" and "pfdr" and input into [REViGO](http://revigo.irb.hr/). Use settings medium similarity (0.7), database wiith GO term sizes (whole UniProt (default)) semantic similarity measure (SimRel).
+
+> More information on REVIGO at: Supek F, Bošnjak M, Škunca N, Šmuc T.  "*REVIGO summarizes and visualizes long lists of Gene Ontology terms"*  PLoS ONE 2011. [doi:10.1371/journal.pone.0021800](http://dx.doi.org/10.1371/journal.pone.0021800)
 
