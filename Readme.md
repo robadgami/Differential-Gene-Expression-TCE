@@ -6,9 +6,9 @@ Project Summary: This project focuses on deciphering the host gene expression ch
 
 ### Data Preparation
 
-##### Clean raw reads
+##### Clean raw reads and pseudoalign
 
-Raw reads were cleaned using 
+Raw read data preparation was done using method in [Explanation-Data_Preparation.md](https://github.com/robadgami/Differential-Gene-Expression-TCE/blob/master/Explanation%20on%20Comparing%20Cluster%20graphs.md). This involved cleaning raw reads and pseudoaligning to a reference transcriptome using kallisto to obtain raw read counts.
 
 
 
