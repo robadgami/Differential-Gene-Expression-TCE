@@ -125,13 +125,14 @@ To do this for multiple patterns a string of patterns is formed.
 ``` sh
 for i in [insert a string of patterns] ; do
 	pattern=(echo i | sed 's/:/-/g' | sed 's/,//g' | sed 's/-//g');
-	echo "Genes,1,3,7,11,Sample" > temp_genelist/clusterdatapattern\.csv;
-	grep -e i identification_final_cluster_matrix_sample.csv | awk -F ',' '{print $1}' > $filelocation/temp_genelist/temppattern\_genelist.csv &&
+	echo "Genes,1,3,7,11,Sample" > $filelocation/temp_genelist/clusterdatapattern\.csv;
+	grep -e i $filelocation/identification_final_cluster_matrix_sample.csv | awk -F ',' '{print $1}' > $filelocation/temp_genelist/temppattern\_genelist.csv &&
 	while read line; do
 	grep -e line  $filelocation/identification_final_Clust_pattern_sample.csv >> $filelocation/temp_genelist/clusterdata_$pattern.csv;
 done < $filelocation/temp_genelist/temp_$pattern_genelist.csv; done
 
 # a long-form of this data is also made for use in R.
+cd $filelocation/temp_genelist
 for files in *.csv ; do
 	echo 'Genes,value,dpi,Sample' > long_data/longfiles &&
 	awk -F ',' 'BEGIN{OFS=",";}{print $1, $2, "1", $6}' files | tail -n +2  >> long_data/longfiles &&
@@ -255,5 +256,13 @@ Open `$filelocation/clustergraph/GOenrichment/output_GOenrichment_table/pfdr0.01
 
 
 
-Copy REViGO output table into a second sheet in an excel version of the `pfdr0.01_table-$pattern\.txt` file and concatenate. Create a new column titled 'hide' and manually remove (insert "1") any terms that are copied/uninteresting/vague. Make a note of general GOannotation.
+Copy REViGO output table into a second sheet in an excel version of the `pfdr0.01_table-$pattern\.txt` file.
+
+Sort both sheet1 and sheet2 and concatenate into a third sheet and create a new column titled "hide" - the new column order should now be:
+
+| GO         | NS       | enrichment                                 | name               | ratio_in_study        | ratio_in_pop            | p-uncorrrected | depth               | study_count           | p_bonferroni | p_sidak | p_holm | p_fdr_bh | term_ID | description | frequency          | plot_X | plot_Y | plot_size | log10 p-value   | uniqueness | dispensability | representative | eliminated                                   | hide                               | study_items            |
+| ---------- | -------- | ------------------------------------------ | ------------------ | --------------------- | ----------------------- | -------------- | ------------------- | --------------------- | ------------ | ------- | ------ | -------- | ------- | ----------- | ------------------ | ------ | ------ | --------- | --------------- | ---------- | -------------- | -------------- | -------------------------------------------- | ---------------------------------- | ---------------------- |
+| GO term ID | BP/CC/MF | is it enriched in the study vs population? | GOterm description | number genes assigned | number genes in general |                | Specificity of term | number genes assigned |              |         |        |          | see GO  | see name    | see ratio_in_study |        |        |           | log10(p_fdr_bh) |            |                |                | deemed similar to other GOterm by REViGO(=1) | manually decided to be ignored(=1) | Name of genes assigned |
+
+Filter by NS and, with the visual help from REViGO, manually go through the list for that comparative cluster pattern and remove (hide=1) any GOterms that are redundant or uninformative. Whats left should give a general overview of what molecular functions/biological processes may be involved in that cluster.
 
