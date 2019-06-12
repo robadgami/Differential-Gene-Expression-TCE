@@ -51,8 +51,9 @@ I want to do: If there is >=75% similarity of genes ($14) then merge the lines t
 ``` sh
 
 mkdir test
+cd test
 # make study_items string into list:
-file=$(ls *.txt);count= '0';while read line; do count=`expr $count + 1`; echo $line | awk -F '\t' '{print $1}' | tr ", " "\n" | sed '/^$/d' | grep "Traes"  > array$count.txt; done < $file; 
+file=$(ls *.txt);count='0';while read line; do count=`expr $count + 1`; echo $line | awk -F '\t' '{print $1}' | tr ", " "\n" | sed '/^$/d' | grep "Traes"  >array$count.txt; done < $file; 
 echo $count	# number of arrays
 
 # compare array1 and array2:
@@ -152,109 +153,6 @@ awk -F '\t' '{print $2}' $files | sort -u >> temp_list_$files.txt; sort -u temp_
 
 # i had a quick look at the processes and i think 80% is too stringent maybe try reducing it to 70%
 ```
-
-
-
-SO, ALL IN ONE GO IS:::::
-
-
-
-``` sh
-cd GOannotation_grouping/
-mkdir test_grouping
-
-pattern="grouping_pfdr0.01_table-C8_1314_OA_NA_1314_SO_NA_1314_SA.txt"
-# make list of arrays
-count='0';while read line; do
-count=`expr $count + 1`
-echo $line | awk -F '\t' '{print $1}' | tr ", " "\n" | sed '/^$/d' > test_grouping/array$count.txt; done < $pattern
-echo $count
-
-# find Jaccard Similarity and put into matrix.txt
-cd test_grouping/
-for comparer in array*.txt; do
-for files in array*.txt;do
-array1count='0';array2count='0';samevalue='0';
-while read line; do
-array1count=`expr $array1count + 1`
-	while read value; do
-	array2count=`expr $array2count + 1`;
-	if [ $line == $value ]; then
-	samevalue=`expr $samevalue + 1`;
-	fi;
-	done < $files;
-done < $comparer; array2count=`expr $array2count / $array1count`; uniquevalue=`expr $array1count + $array2count - $samevalue` 
-fractionsimilar=$(awk "BEGIN { pc=100*${samevalue}/${uniquevalue}; i=int(pc); print (pc-i<0.5)?i:i+1}");
-echo $comparer $files $fractionsimilar | tr ' ' '\t' >> matrix_$pattern
-done;
-echo "end $comparer"
-rm $comparer
-done
-
-# group lines with 75% similar matching study_items list
-cat matrix_$pattern | tr ' ' '\t' | grep -v "100" | awk '!/0/' | awk '($3 > 74)' | sort -r  -k3n > similarity75_matrix_$pattern
-
-cp similarity75_matrix_$pattern copy_similarity75_matrix_$pattern
-
-#make a list of all the arrays
-awk -F '\t' '{print $1}' copy_similarity75_matrix_$pattern | sort -u > temp2_list_$pattern
-awk -F '\t' '{print $2}' copy_similarity75_matrix_$pattern | sort -u >> temp2_list_$pattern; sort -u temp2_list_$pattern > temp_list_$pattern; rm temp2_list_$pattern
-
-# find the most similar and grep the first array:
-arr=$(head -1 temp_list_$pattern);
-grep $arr copy_similarity75_matrix_$pattern >> order_matrix_$arr;
-sed /$arr/d copy_similarity75_matrix_$pattern > temp_copy_similarity75_matrix_$pattern; mv temp_copy_similarity75_matrix_$pattern copy_similarity75_matrix_$pattern;
-sed /$arr/d temp_list_$pattern > temp_temp_list_$pattern; mv temp_temp_list_$pattern temp_list_$pattern; echo $arr
-
-# grep all matching that and put into that array file:
-cut -d$'\t' -f2 order_matrix_$arr | while read line; do
-if grep -q $line copy_similarity75_matrix_$pattern; then
-echo "---------"$line "still got matches--------"
-grep $line copy_similarity75_matrix_$pattern >> order_matrix_$arr;
-sed /$line/d copy_similarity75_matrix_$pattern > temp_copy_similarity75_matrix_$pattern; mv temp_copy_similarity75_matrix_$pattern copy_similarity75_matrix_$pattern;
-sed /$line/d temp_list_$pattern > temp_temp_list_$pattern; mv temp_temp_list_$pattern temp_list_$pattern; fi
-done && 
-cut -d$'\t' -f1 order_matrix_$arr | while read line; do
-if grep -q $line copy_similarity75_matrix_$pattern; then
-echo "its still got matches"
-grep $line copy_similarity75_matrix_$pattern >> order_matrix_$arr;
-sed /$line/d copy_similarity75_matrix_$pattern > temp_copy_similarity75_matrix_$pattern;
-mv temp_copy_similarity75_matrix_$pattern copy_similarity75_matrix_$pattern;
-sed /$line/d temp_list_$pattern > temp_temp_list_$pattern; mv temp_temp_list_$pattern temp_list_$pattern; fi;
-[ -s temp_list_$pattern ] || rm temp_list_$pattern
-done
-
-##### I NEED A WAY TO BE ABLE TO TELL WHEN IT IS NO LONGER SHORTENING THE copy_matrix_sorted2.txt; then it goes back to the arr="..."
-
-#### THEN I need a way for it to recognise that temp_list.txt is empty and remove it and stop the loops.
-
-### THEN I WANT TO MAKE THE ARRAYS INTO LISTS.txt
-for files in order_matrix_array*.txt; do
-awk -F '\t' '{print $1}' $files | sort -u > temp_list_$files.txt
-awk -F '\t' '{print $2}' $files | sort -u >> temp_list_$files.txt; sort -u temp_list_$files.txt > list_$files.txt; done
-
-### THEN A WAY OF GREPPING THE LINE CORRESPONDING TO THE LIST SO IT IS PUT IN THIS ORDER WITH THE APPROPRIATE NAME GIVEN IN AN EXTRA COLUMN.
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
