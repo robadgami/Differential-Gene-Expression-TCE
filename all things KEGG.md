@@ -69,6 +69,24 @@ Save the results table: [rice_F22_1dpi_OA](http://kobas.cbi.pku.edu.cn/result_ko
 
 
 
+(6) Numbers for how things are reduced over time.
+
+
+
+````sh
+ls NCBI_F22*.txt | cut -d '_' -f2-4 | while read line; do  echo 'FILE' 'wheat' 'rice' 'uniq_rice' 'NCBI' 'uniq_NCBI'; echo $line    $(awk -F '\t' '{print $1}' rice_wheat_$line | grep 'Traes' | wc -l) $(awk -F '\t' '{print $3}' rice_wheat_$line | grep 'Os' | wc -l) $(awk -F '\t' '{print $1}' NCBI_rice_$line | grep 'Os' | wc -l) $(awk -F '\t' '{print $2}' rice_wheat_$line | grep -v '^$' | wc -l) $(awk -F '\t' '{print $1}' NCBI_$line | grep -v '^$' | wc -l); done > data_info.txt
+````
+
+Instead, do
+
+````sh
+wcho $(wc -l F22_*.txt) $(wc -l rice_F22_*.txt) $(wc -l NCBI_F22_*.txt)
+````
+
+
+
+
+
 For F22_1dpi_OA:
 
 KEGG pathway suggests enrichment in F22_OA at 1dpi  show metbaolism changes, signalling nd protein metabolism

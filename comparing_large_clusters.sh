@@ -1,4 +1,4 @@
-cd /Users/rbadgami/Desktop/GOenrichment
+cd /Users/rbadgami/Desktop/data2/GOenrichment
 mkdir comparing_clusters
 
 clusterSA="C9"
