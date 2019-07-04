@@ -48,13 +48,15 @@ awk -F ' ' '{print $1}' $Gocategorylocation/ONLY_3_GO_SA_$clusterSA\_SO_$cluster
 
 
 # alternatively, just to sort out clustering later:
-echo 'GO|NS|depth|ratio_in_study|study_count|p_fdr_bh|name|isolate_cultivar' > comparing_cluster_graphing/GO_sigfdr_table_F22_SA_$clusterSA\_SO_$clusterSO\_OA_$clusterOA.txt; awk -F '\t' '$8 < 4 && $8>1 && $13<0.05'  table_GOassociation_F22_SA/sigfdr_table_F22_SA/sig_fdr_table_F22_SA_$clusterSA.txt | sed 's/^[^G]*G/G/' | awk -F '\t' -v sample='F22_SA' 'BEGIN{OFS="|";}{print $1, $2, $8, $5, $9, $13, $4,sample}' >> comparing_cluster_graphing/GO_sigfdr_table_F22_SA_$clusterSA\_SO_$clusterSO\_OA_$clusterOA.txt; awk -F '\t' '$8 < 4 && $8>1 && $13<0.05'  table_GOassociation_F22_SO/sigfdr_table_F22_SO/sig_fdr_table_F22_SO_$clusterSO.txt | sed 's/^[^G]*G/G/' | awk -F '\t' -v sample='F22_SO' 'BEGIN{OFS="|";}{print $1, $2, $8, $5, $9, $13, $4,sample}' >> comparing_cluster_graphing/GO_sigfdr_table_F22_SA_$clusterSA\_SO_$clusterSO\_OA_$clusterOA.txt; awk -F '\t' '$8 < 4 && $8>1 && $13<0.05'  table_GOassociation_F22_OA/sigfdr_table_F22_OA/sig_fdr_table_F22_OA_$clusterOA.txt | sed 's/^[^G]*G/G/' | awk -F '\t' -v sample='F22_OA' 'BEGIN{OFS="|";}{print $1, $2, $8, $5, $9, $13, $4,sample}' >> comparing_cluster_graphing/GO_sigfdr_table_F22_SA_$clusterSA\_SO_$clusterSO\_OA_$clusterOA.txt
+GOenrichmentlocation="/Users/rbadgami/Desktop/data2/GOenrichment"
+echo 'GO|NS|depth|ratio_in_study|study_count|p_fdr_bh|name|isolate_cultivar' > $GOenrichmentlocation/comparing_cluster_graphing/GO_sigfdr_table_F22_SA_$clusterSA\_SO_$clusterSO\_OA_$clusterOA.txt; awk -F '\t' '$8 < 4 && $8>1 && $13<0.05'  $GOenrichmentlocation/table_GOassociation_F22_SA/sigfdr_table_F22_SA/sig_fdr_table_F22_SA_$clusterSA.txt | sed 's/^[^G]*G/G/' | awk -F '\t' -v sample='F22_SA' 'BEGIN{OFS="|";}{print $1, $2, $8, $5, $9, $13, $4,sample}' >> $GOenrichmentlocation/comparing_cluster_graphing/GO_sigfdr_table_F22_SA_$clusterSA\_SO_$clusterSO\_OA_$clusterOA.txt; awk -F '\t' '$8 < 4 && $8>1 && $13<0.05'  $GOenrichmentlocation/table_GOassociation_F22_SO/sigfdr_table_F22_SO/sig_fdr_table_F22_SO_$clusterSO.txt | sed 's/^[^G]*G/G/' | awk -F '\t' -v sample='F22_SO' 'BEGIN{OFS="|";}{print $1, $2, $8, $5, $9, $13, $4,sample}' >> $GOenrichmentlocation/comparing_cluster_graphing/GO_sigfdr_table_F22_SA_$clusterSA\_SO_$clusterSO\_OA_$clusterOA.txt; awk -F '\t' '$8 < 4 && $8>1 && $13<0.05'  table_GOassociation_F22_OA/sigfdr_table_F22_OA/sig_fdr_table_F22_OA_$clusterOA.txt | sed 's/^[^G]*G/G/' | awk -F '\t' -v sample='F22_OA' 'BEGIN{OFS="|";}{print $1, $2, $8, $5, $9, $13, $4,sample}' >> comparing_cluster_graphing/GO_sigfdr_table_F22_SA_$clusterSA\_SO_$clusterSO\_OA_$clusterOA.txt
 
 # open only want depth 2:
 mkdir comparing_cluster_graphing/depth2
 for files in /Users/rbadgami/Desktop/data2/GOenrichment/comparing_cluster_graphing/group*.txt; do
 	head -1 $files > comparing_cluster_graphing/depth2_$files; awk -F '|' 'BEGIN{OFS="|";} $5==2' $files > /Users/rbadgami/Desktop/data2/GOenrichment/comparing_cluster_graphing/depth2_$files;
 done
+
 
 
 
