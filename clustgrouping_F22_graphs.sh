@@ -1,43 +1,32 @@
 cd /Users/rbadgami/Desktop/data2/Cluster_matrix
 clustfile="/Users/rbadgami/Desktop/data2/data_clustgroupgraphs"
-# group 1
-grep 'C6:F22_OA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/group1_C6-F22-OA_C12-F22-SO_C6-F22-SA.csv
-grep 'C12:F22_SO' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SO' >> $clustfile/group1_C6-F22-OA_C12-F22-SO_C6-F22-SA.csv
-grep 'C6:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group1_C6-F22-OA_C12-F22-SO_C6-F22-SA.csv
-# group 2
-grep 'C12:F22_OA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/group2_C12-F22-OA_NA-F22-SO_C14-F22-SA.csv 
-grep 'C14:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group2_C12-F22-OA_NA-F22-SO_C14-F22-SA.csv
-# group 3
-grep 'C0:F22_OA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/group3_C0-F22-OA_C0-F22-SO_C0-F22-SA.csv
-grep 'C0:F22_SO' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SO' >> $clustfile/group3_C0-F22-OA_C0-F22-SO_C0-F22-SA.csv
-grep 'C0:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group3_C0-F22-OA_C0-F22-SO_C0-F22-SA.csv
-# group 4
-grep 'C15:F22_OA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/group4_C15-F22-OA_C5-F22-SO_NA-F22-SA.csv
-grep 'C5:F22_SO' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SO' >> $clustfile/group4_C15-F22-OA_C5-F22-SO_NA-F22-SA.csv
-# group 5
-grep 'C7:F22_OA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/group5_C7-F22-OA_C4-F22-SO_C7-F22-SA.csv &&
-grep 'C4:F22_SO' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SO' >> $clustfile/group5_C7-F22-OA_C4-F22-SO_C7-F22-SA.csv &&
-grep 'C7:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group5_C7-F22-OA_C4-F22-SO_C7-F22-SA.csv &&
-# group 6
-grep 'C6:F22_SO' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SO' > $clustfile/group6_NA-F22-OA_C6-F22-SO_C13-F22-SA.csv &&
-grep 'C13:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group6_NA-F22-OA_C6-F22-SO_C13-F22-SA.csv &&
-# group 7
-grep 'C12:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group7_NA-F22-OA_NA-F22-SO_C12-F22-SA.csv &&
-# group 8
-grep 'C5:F22_OA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/group8_C5-F22-OA_NA-F22-SO_C15-F22-SA.csv &&
-grep 'C15:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group8_C5-F22-OA_NA-F22-SO_C15-F22-SA.csv &&
-# group 9
-grep 'C4:F22_OA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/group9_C4-F22-OA_C11-F22-SO_C5-F22-SA.csv &&
-grep 'C11:F22_SO' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SO' >> $clustfile/group9_C4-F22-OA_C11-F22-SO_C5-F22-SA.csv &&
-grep 'C5:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group9_C4-F22-OA_C11-F22-SO_C5-F22-SA.csv &&
-# group 10
-grep 'C9:F22_OA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/group10_C9-F22-OA_C2-F22-SO_C9-F22-SA.csv &&
-grep 'C2:F22_SO' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SO' >> $clustfile/group10_C9-F22-OA_C2-F22-SO_C9-F22-SA.csv &&
-grep 'C9:F22_SA' identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/group10_C9-F22-OA_C2-F22-SO_C9-F22-SA.csv
+
+# F22-infected cultivars have been grouped into these clusters.
+#group='group1'; COA="C6:F22_OA"; CSO="C12:F22_SO"; CSA="C6:F22_SA"
+#group='group2'; COA="C12:F22_OA"; CSO="noSOhere"; CSA="C14:F22_SA"
+#group='group3'; COA="C0:F22_OA"; CSO="C0:F22_SO"; CSA="C0:F22_SA"
+#group='group4'; COA="C15:F22_OA"; CSO="C5:F22_SO"; CSA="noSAhere"
+#group='group5'; COA="C7:F22_OA"; CSO="C4:F22_SO"; CSA="C7:F22_SA"
+#group='group6'; COA="noOAhere"; CSO="C6:F22_SO"; CSA="C13:F22_SA"
+#group='group7'; COA="noOAhere"; CSO="noSOhere"; CSA="C12:F22_SA"
+#group='group8'; COA="C5:F22_OA"; CSO="noSOhere"; CSA="C15:F22_SA"
+#group='group9'; COA="C4:F22_OA"; CSO="C11:F22_SO"; CSA="C5:F22_SA"
+#group='group10'; COA="C9:F22_OA"; CSO="C2:F22_SO"; CSA="C9:F22_SA"
+#group='group11'; COA="C2:F22_OA"; CSO="C9:F22_SO"; CSA="C3:F22_SA"
+#group='group12'; COA="C1:F22_OA"; CSO="C7:F22_SO"; CSA="C1:F22_SA"
+#group='group13'; COA="C8:F22_OA"; CSO="C3:F22_SO"; CSA="noSAhere"
+#group='group14'; COA="C10:F22_OA"; CSO="noSOhere"; CSA="C10:F22_SA"
+#group='group15'; COA="C4:F22_OA"; CSO="C10:F22_SO"; CSA="C4:F22_SA"
+#group='group16'; COA="C13:F22_OA"; CSO="C8:F22_SO"; CSA="C2:F22_SA"
+#group='group17'; COA="C14:F22_OA"; CSO="C13:F22_SO"; CSA="noSAhere"
+#group='group18'; COA="noOAhere"; CSO="C1:F22_SO"; CSA="C11:F22_SA"
+#group='group19'; COA="C11:F22_OA"; CSO="C15:F22_SO"; CSA="noSAhere"
+# collate Clust-normalised tpm values from the identification_final_cluster_matrix file.
+grep $COA identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_OA' > $clustfile/$group\_normalisedClusttpm.csv; grep $CSO identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SO' >> $clustfile/$group\_normalisedClusttpm.csv; grep $CSA identification_final_cluster_matrix_F22.csv | awk -F ',' '{print $1}' | while read line; do grep $line identification_final_Clust_pattern_F22.csv; done | grep 'F22_SA' >> $clustfile/$group\_normalisedClusttpm.csv
 
 # make graph into long-form
-
 mkdir /Users/rbadgami/Desktop/data2/data_clustgroupgraphs/long_data
+cd $clustfile
 for files in *.csv ; do
 	echo 'Sample,Genes,dpi,value' > long_data/long_$files &&
 	awk -F ',' 'BEGIN{OFS=",";}{print $6, $1, "01", $3}' $files | tail -n +2  >> long_data/long_$files &&
@@ -45,6 +34,7 @@ for files in *.csv ; do
 	awk -F ',' 'BEGIN{OFS=",";}{print $6, $1, "07", $5}' $files | tail -n +2 >> long_data/long_$files &&
 	awk -F ',' 'BEGIN{OFS=",";}{print $6, $1, "11", $6}' $files | tail -n +2 >> long_data/long_$files;
 done
+
 
 cd /Users/rbadgami/Desktop/data2/data_clustgroupgraphs/long_data
 filelocation_longdata="/Users/rbadgami/Desktop/data2/data_clustgroupgraphs/long_data"

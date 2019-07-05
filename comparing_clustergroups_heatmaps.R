@@ -226,13 +226,13 @@ ggplot(group1_long_depth3_BP, aes(y=`-log10(pfdr)`, x=sample_category)) + ylab('
   
   
 # midinfection peak group2 and group3
-midinfectionpeak <- read_excel("~/Desktop/data2/GOenrichment/comparing_cluster_graphing/midinfection_peak.xlsx")
+midinfectionpeak <- read_excel("~/Desktop/data2/GOenrichment/comparing_cluster_graphing/midinfection_group2345.xlsx")
 midinfectionpeak$`name-GO` <- paste0(midinfectionpeak$name,"-",midinfectionpeak$GO)
 midinfectionpeak$`group_isolate_cultivar` <- paste0(midinfectionpeak$group,"-",midinfectionpeak$isolate_cultivar)
 midinfectionpeak$`-log10(pfdr)` <- -1*log10(midinfectionpeak$p_fdr_bh)
 
-midinfectionpeak_depth2 <- midinfectionpeak[midinfectionpeak$depth == '2',]
+midinfectionpeak_depth2 <- midinfectionpeak[midinfectionpeak$depth == '3',]
 midinfectionpeak_depth2_BP <- midinfectionpeak_depth2[midinfectionpeak_depth2$NS == 'BP',]
 
-ggplot(midinfectionpeak_depth2_BP , mapping = aes(x=group_isolate_cultivar,y=`name-GO`, fill=`-log10(pfdr)`)) + geom_tile() + xlab(label = "isolate_cultivar") + facet_grid(NS ~ ., scales ="free", space = "free") + theme(strip.text.y = element_text(angle = 180)) + scale_fill_gradient(name = "-log10(pfdr)", low = "#FEE6CE",high = "#8C2D04") + theme_bw() + theme(plot.title = element_text(hjust = 0.5),axis.title.y = element_blank(),strip.background = element_rect(fill = "#EEEEEE", color = "#FFFFFF"), axis.text.x = element_text(angle=90, hjust = 1)) +
-  ggtitle(label = "GOterm diversity of group2,3,4,5 at depth2") + scale_x_discrete(limits=c("group2-F22_OA","group2-F22_SO","group2-F22_SA","group3-F22_OA","group3-F22_SO","group3-F22_SA","group4-F22_OA","group4-F22_SO","group4-F22_SA","group5-F22_OA","group5-F22_SO","group5-F22_SA"))
+ggplot(midinfectionpeak_depth2 , mapping = aes(x=group_isolate_cultivar,y=`name-GO`, fill=`-log10(pfdr)`)) + geom_tile() + xlab(label = "isolate_cultivar") + facet_grid(NS ~ ., scales ="free", space = "free") + theme(strip.text.y = element_text(angle = 180)) + scale_fill_gradient(name = "-log10(pfdr)", low = "#FEE6CE",high = "#8C2D04") + theme_bw() + theme(plot.title = element_text(hjust = 0.5),axis.title.y = element_blank(),strip.background = element_rect(fill = "#EEEEEE", color = "#FFFFFF"), axis.text.x = element_text(angle=90, hjust = 1)) +
+  ggtitle(label = "GOterm diversity of group2,3,4,5 at depth2") + scale_x_discrete(limits=c("group02-F22_OA","group02-F22_SO","group02-F22_SA","group03-F22_OA","group03-F22_SO","group03-F22_SA","group04-F22_OA","group04-F22_SO","group04-F22_SA","group05-F22_OA","group05-F22_SO","group05-F22_SA"))
