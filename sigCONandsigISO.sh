@@ -55,7 +55,7 @@ conda activate stan
 cd anaconda3/lib/python3.7/site-packages/goatools
 filelocation=$filelocationBOTH'/comparing_list'
 file="F22_1dpi_SAonly.txt"
-python  /Users/rbadgami/anaconda3/bin/find_enrichment.py  --obo /Users/rbadgami/go-basic.obo --pval=0.05  --indent $filelocation/$file /Users/rbadgami/Desktop/GOenrichment/refseq-ids-transcriptsclean_altered.txt /Users/rbadgami/Desktop/GOenrichment/GO-association-refseq-transcripts-only_altered.txt > $filelocation/GOannotation/GOannotation_$file &&
+python  /Users/rbadgami/anaconda3/bin/find_enrichment.py  --obo /Users/rbadgami/go-basic.obo --pval=0.05  --indent $filelocation/$file /Users/rbadgami/Desktop/data2/GOenrichment/refseq-ids-transcriptsclean_altered.txt /Users/rbadgami/Desktop/data2/GOenrichment/GO-association-refseq-transcripts-only_altered.txt > $filelocation/GOannotation/GOannotation_$file &&
 tail -n +21 $filelocation/GOannotation/GOannotation_$file | sed 's/^[^G]*G/G/' > $filelocation/GOannotation/table_GOannotation_$file && awk -F '\t' '$13 < 0.01' $filelocation/GOannotation/table_GOannotation_$file > $filelocation/table_pfdr0.01_GOannotation_$file
 awk -F '\t' '$13 < 0.05' $filelocation/GOannotation/table_GOannotation_$file > $filelocation/GOannotation/table_pfdr0.05_GOannotation_$file
 
