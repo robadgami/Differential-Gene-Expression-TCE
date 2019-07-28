@@ -6,7 +6,6 @@ filelocationCON="/Users/rbadgami/Desktop/data2/read_count_data/DESeq2_CON/gene_l
 filelocationISO="/Users/rbadgami/Desktop/data2/read_count_data/DESeq2_isolate/LFC/table_LFCisanumber/LFC_dpi_cultivar"
 filelocationBOTH="/Users/rbadgami/Desktop/data2/read_count_data/DESeq2_isolate/LFC/table_LFCisanumber/LFC_dpi_cultivar/sigCONandsigCULTIVAR"
 
-
 ls $filelocationCON/gene*.txt | cut -d"/" -f9 |cut -d"_" -f3-5 | cut -d"." -f1 | sort | uniq | while read line; do
 cat $filelocationCON/*$line*.txt $filelocationISO/uniqgenes*$line*.txt | grep 'Traes' | sort | uniq -d > $filelocationBOTH/$line.txt; 
 echo "________"$line"_______"; wc -l $filelocationCON/*$line*.txt; wc -l $filelocationISO/uniqgenes*$line*.txt; wc -l $filelocationBOTH/$line.txt; done
