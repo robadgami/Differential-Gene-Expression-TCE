@@ -75,3 +75,16 @@ for files in table_p*.txt; do
 
 # open excel and do final checks and modifications
 # run R to visualise key molecular processes.
+
+
+
+
+# run .R script for DESeq2_SA.R to find total differentially expressed genes between F22 and 13/14-SA (where 13/14 is reference)
+# Then find what happened to the incompatibility-related genes:
+ echo 'dpi gene baseMean log2FoldChange stat pvalue padj'> /Users/rbadgami/Desktop/rectifyingLFCerror/SA_F22v1314_LFC.txt
+for dpi in '1dpi' '3dpi' '7dpi'; do
+while read line; do 
+echo $dpi  $line $(grep "$line " /Users/rbadgami/Desktop/data2/read_count_data/DESeq2_isolate/sig_SA_$dpi\_F22v1314_shrunk.txt) | grep 'Traes' >> /Users/rbadgami/Desktop/rectifyingLFCerror/SA_F22v1314_LFC.txt;
+ done < /Users/rbadgami/Desktop/rectifyingLFCerror/genes_rectifyingLFCerror_$dpi\_SAupreg_LFC.txt; done
+ # if its blank that implies the expression was the same bertween F22 and 13/14-infected SA.
+
