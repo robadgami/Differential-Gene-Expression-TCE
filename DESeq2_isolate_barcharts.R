@@ -4,6 +4,19 @@ isolate_long <- read_excel("/Volumes/RBADGAMI 1/control_sig.xlsx", sheet = "isol
 colnames(isolate_long)
 isolate_long$LFC_gene_number = as.numeric(isolate_long$LFC_gene_number)
 
+control_sig <- read_excel("/Volumes/RBADGAMI 1/control_sig.xlsx", 
+                                                sheet = "isolate")
+colnames(control_sig) <- c('total sigDEG', 'isolate', 'dpi','comparison','LFC>0', 'LFC<0', 'LFC=NA', 'total_sig_LFC')
+head(control_sig)
+control_sig$comparison_dpi <- paste0(control_sig$comparison, '-', control_sig$dpi)
+control_sig_F22 <- control_sig[control_sig$isolate == 'F22',]
+control_sig_F22_proj <- control_sig_F22[control_sig_F22$dpi != '11dpi',]
+
+library(ggplot2)
+ggplot(control_sig_F22_proj, aes(x=comparison, y=total_sig_LFC, fill=comparison)) + geom_bar(stat='identity') + facet_grid(~dpi) + scale_x_discrete(limits=c('SAvOA', 'SAvSO', 'SOvOA')) +
+  theme_bw() + xlab (' cultivar-cultiar comparison') + ylab('total significant DEGs')
+
+
 # get appropriate colour scheme
 library(RColorBrewer)
 display.brewer.all(colorblindFriendly = TRUE)

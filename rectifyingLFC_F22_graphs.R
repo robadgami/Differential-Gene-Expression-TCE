@@ -22,24 +22,58 @@ ggplot(GOcomparison_rectifyingLFC_1dpi, mapping = aes(x=isolate_cultivar_dpi,y=N
   facet_grid(criteria ~ dpi, scales ="free", space = "free") + scale_fill_gradient(name = "-log10(respective p-value)", low = "#FEE6CE",high = "#8C2D04") + theme_bw() +
   theme(plot.title = element_text(hjust = 0.5),axis.title.y = element_blank(),strip.background = element_rect(fill = "#EEEEEE", color = "#FFFFFF"), axis.text.x = element_text(angle=90, hjust = 1)) +
   ggtitle(label = "GOterm fitting criteria at 1dpi")
-ggplot(GOcomparison_rectifyingLFC_1dpi, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=isolate_cultivar)) + geom_bar(stat='identity',,position = "dodge") + coord_flip() +
-  facet_grid(criteria + NS~ ., scales ="free", space = "free") + theme_bw() +
+ggplot(GOcomparison_rectifyingLFC_1dpi, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=isolate_cultivar)) + geom_bar(stat='identity',position = "dodge") + coord_flip() +
+  facet_grid(criteria + NS~ ., scales ="free", space = "free") + theme_bw() +  
   ggtitle(label = "GOterm fitting criteria at 1dpi")
+### enriched-SA at 1 dpi
+GOcomparison_rectifyingLFC_1dpi_SAonly <- GOcomparison_rectifyingLFC_1dpi[GOcomparison_rectifyingLFC_1dpi$criteria == "enriched-SA",]
+ggplot(GOcomparison_rectifyingLFC_1dpi_SAonly, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=GO)) + geom_bar(stat='identity',position = "dodge") + coord_flip() +
+  facet_grid(NS~ ., scales ="free", space = "free") + theme_bw() + 
+  ggtitle(label = "GOterm fitting criteria at 1dpi") + theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text=element_text(size=12))
+
+
+# 3dpi
 
 GOcomparison_rectifyingLFC_3dpi <- GOcomparison_rectifyingLFC[GOcomparison_rectifyingLFC$dpi == "3dpi",]
 ggplot(GOcomparison_rectifyingLFC_3dpi, mapping = aes(x=isolate_cultivar_dpi,y=NS_name_GO, fill=`-log10(respective p-value)`)) + geom_tile() +
   facet_grid(criteria ~ dpi, scales ="free", space = "free") + scale_fill_gradient(name = "-log10(respective p-value)", low = "#FEE6CE",high = "#8C2D04") + theme_bw() +
   theme(plot.title = element_text(hjust = 0.5),axis.title.y = element_blank(),strip.background = element_rect(fill = "#EEEEEE", color = "#FFFFFF"), axis.text.x = element_text(angle=90, hjust = 1)) +
   ggtitle(label = "GOterm fitting criteria at 3dpi")
-ggplot(GOcomparison_rectifyingLFC_3dpi, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=isolate_cultivar)) + geom_bar(stat='identity',,position = "dodge") + coord_flip() +
+ggplot(GOcomparison_rectifyingLFC_3dpi, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=isolate_cultivar)) + geom_bar(stat='identity',position = "dodge") + coord_flip() +
   facet_grid(criteria + NS~ ., scales ="free", space = "free") + theme_bw() +
   ggtitle(label = "GOterm fitting criteria at 3dpi") + xlab('percentage assigned genes , %')
+
+GOcomparison_rectifyingLFC_3dpi_SAonly <- GOcomparison_rectifyingLFC_3dpi[GOcomparison_rectifyingLFC_3dpi$criteria == "enriched-SA",]
+ggplot(GOcomparison_rectifyingLFC_3dpi_SAonly, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=GO)) + geom_bar(stat='identity',position = "dodge") + coord_flip() +
+  facet_grid(NS~ ., scales ="free", space = "free") + theme_bw() + 
+  ggtitle(label = "GOterm fitting criteria at 3 dpi") + theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text=element_text(size=10))
+
+
+
+
+
+# 7 dpi
 
 GOcomparison_rectifyingLFC_7dpi <- GOcomparison_rectifyingLFC[GOcomparison_rectifyingLFC$dpi == "7dpi",]
 ggplot(GOcomparison_rectifyingLFC_7dpi, mapping = aes(x=isolate_cultivar_dpi,y=NS_name_GO, fill=`-log10(respective p-value)`)) + geom_tile() +
   facet_grid(criteria ~ dpi, scales ="free", space = "free") + scale_fill_gradient(name = "-log10(respective p-value)", low = "#FEE6CE",high = "#8C2D04") + theme_bw() +
   theme(plot.title = element_text(hjust = 0.5),axis.title.y = element_blank(),strip.background = element_rect(fill = "#EEEEEE", color = "#FFFFFF"), axis.text.x = element_text(angle=90, hjust = 1)) +
   ggtitle(label = "GOterm fitting criteria at 7dpi")
-ggplot(GOcomparison_rectifyingLFC_7dpi, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=isolate_cultivar)) + geom_bar(stat='identity',,position = "dodge") + coord_flip() +
+ggplot(GOcomparison_rectifyingLFC_7dpi, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=isolate_cultivar)) + geom_bar(stat='identity',position = "dodge") + coord_flip() +
   facet_grid(criteria + NS~ ., scales ="free", space = "free") + theme_bw() +
   ggtitle(label = "GOterm fitting criteria at 7dpi")
+
+
+GOcomparison_rectifyingLFC_7dpi_SAonly <- GOcomparison_rectifyingLFC_7dpi[GOcomparison_rectifyingLFC_7dpi$criteria == "enriched-SA",]
+ggplot(GOcomparison_rectifyingLFC_7dpi_SAonly, aes(y=percentage_assigned_genes,x=reorder(name_GO,assigned_genes),fill=NS)) + geom_bar(stat='identity',position = "dodge") + coord_flip() +
+  facet_grid(NS~ ., scales ="free", space = "free") + theme_bw() + 
+  ggtitle(label = "GOterm fitting criteria at 7 dpi") + theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text=element_text(size=10))
