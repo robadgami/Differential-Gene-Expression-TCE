@@ -1,0 +1,5 @@
+GO	NS	enrichment	name	ratio_in_study	ratio_in_pop	p_uncorrected	depth	study_count	p_bonferroni	p_sidak	p_holm	p_fdr_bh	study_items
+GO:0010817	BP	e	regulation of hormone levels  	1/40	229/269428	0.0334	3	1	1	1	1	1	TraesCS5B02G561300
+GO:0023051	BP	e	regulation of signaling       	1/40	266/269428	0.0387	3	1	1	1	1	1	TraesCS2A02G199300
+GO:0006810	BP	e	transport                     	3/40	5558/269428	0.0493	3	3	1	1	1	1	TraesCS2A02G031600, TraesCS2D02G009100, TraesCS5A02G332300
+GO:0044444	CC	e	cytoplasmic part              	4/40	7098/269428	0.0207	3	4	1	1	1	1	TraesCS2A02G009300, TraesCS2A02G031600, TraesCS2D02G010200, TraesCS7A02G422400

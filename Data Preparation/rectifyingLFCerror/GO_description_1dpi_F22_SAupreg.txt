@@ -1,0 +1,72 @@
+Gene stable ID	Gene description	GO term accession	GO term name	GO term definition
+TraesCS2A02G031600	Exocyst subunit Exo70 family protein [Source:UniProtKB/TrEMBL;Acc:A0A1D5TPS0]	GO:0000145	exocyst	A protein complex peripherally associated with the plasma membrane that determines where vesicles dock and fuse. At least eight complex components are conserved between yeast and mammals.
+TraesCS3D02G504400		GO:0003677	DNA binding	Any molecular function by which a gene product interacts selectively and non-covalently with DNA (deoxyribonucleic acid).
+TraesCS6A02G418400		GO:0003824	catalytic activity	"Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic."
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0004601	peroxidase activity	Catalysis of the reaction: donor + hydrogen peroxide = oxidized donor + 2 H2O.
+TraesCS5B02G535400		GO:0004672	protein kinase activity	"Catalysis of the phosphorylation of an amino acid residue in a protein, usually according to the reaction: a protein + ATP = a phosphoprotein + ADP."
+TraesCS2A02G009300		GO:0005515	protein binding	Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).
+TraesCS2D02G010200		GO:0005515	protein binding	Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).
+TraesCS4D02G208300		GO:0005515	protein binding	Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).
+TraesCS5B02G535400		GO:0005524	ATP binding	"Interacting selectively and non-covalently with ATP, adenosine 5'-triphosphate, a universally important coenzyme and enzyme regulator."
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0005576	extracellular region	The space external to the outermost structure of a cell. For cells without external protective or external encapsulating structures this refers to space outside of the plasma membrane. This term covers the host cell environment outside an intracellular parasite.
+TraesCSU02G039800		GO:0005634	nucleus	"A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent."
+TraesCS2A02G199300		GO:0005886	plasma membrane	The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins.
+TraesCS2B02G109700	Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	GO:0006012	galactose metabolic process	"The chemical reactions and pathways involving galactose, the aldohexose galacto-hexose. D-galactose is widely distributed in combined form in plants, animals and microorganisms as a constituent of oligo- and polysaccharides; it also occurs in galactolipids and as its glucoside in lactose and melibiose."
+TraesCSU02G039800		GO:0006355	"regulation of transcription, DNA-templated"	"Any process that modulates the frequency, rate or extent of cellular DNA-templated transcription."
+TraesCSU02G039800		GO:0006355	"regulation of transcription, DNA-templated"	"Any process that modulates the frequency, rate or extent of cellular DNA-templated transcription."
+TraesCS5B02G535400		GO:0006468	protein phosphorylation	The process of introducing a phosphate group on to a protein.
+TraesCS6A02G149700		GO:0006541	glutamine metabolic process	"The chemical reactions and pathways involving glutamine, 2-amino-4-carbamoylbutanoic acid."
+TraesCS2A02G031600	Exocyst subunit Exo70 family protein [Source:UniProtKB/TrEMBL;Acc:A0A1D5TPS0]	GO:0006887	exocytosis	"A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for exemple of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell."
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0006979	response to oxidative stress	"Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of oxidative stress, a state often resulting from exposure to high levels of reactive oxygen species, e.g. superoxide anions, hydrogen peroxide (H2O2), and hydroxyl radicals."
+TraesCS7B02G190700		GO:0008168	methyltransferase activity	Catalysis of the transfer of a methyl group to an acceptor molecule.
+TraesCS2A02G009300		GO:0008270	zinc ion binding	Interacting selectively and non-covalently with zinc (Zn) ions.
+TraesCS2D02G010200		GO:0008270	zinc ion binding	Interacting selectively and non-covalently with zinc (Zn) ions.
+TraesCS2A02G009300		GO:0009507	chloroplast	"A chlorophyll-containing plastid with thylakoids organized into grana and frets, or stroma thylakoids, and embedded in a stroma."
+TraesCS2D02G010200		GO:0009507	chloroplast	"A chlorophyll-containing plastid with thylakoids organized into grana and frets, or stroma thylakoids, and embedded in a stroma."
+TraesCS7A02G422400		GO:0009507	chloroplast	"A chlorophyll-containing plastid with thylakoids organized into grana and frets, or stroma thylakoids, and embedded in a stroma."
+TraesCS5B02G561300	Cytokinin riboside 5'-monophosphate phosphoribohydrolase [Source:UniProtKB/TrEMBL;Acc:W5FJL9]	GO:0009691	cytokinin biosynthetic process	"The chemical reactions and pathways resulting in the formation of cytokinins, a class of adenine-derived compounds that can function in plants as growth regulators."
+TraesCS2A02G199300		GO:0009738	abscisic acid-activated signaling pathway	"A series of molecular signals generated by the binding of the plant hormone abscisic acid (ABA) to a receptor, and ending with modulation of a cellular process, e.g. transcription."
+TraesCS2A02G031600	Exocyst subunit Exo70 family protein [Source:UniProtKB/TrEMBL;Acc:A0A1D5TPS0]	GO:0015031	protein transport	"The directed movement of proteins into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore."
+TraesCS5A02G332300		GO:0015267	channel activity	"Enables the energy-independent facilitated diffusion, mediated by passage of a solute through a transmembrane aqueous pore or channel. Stereospecificity is not exhibited but this transport may be specific for a particular molecular species or class of molecules."
+TraesCS2D02G009100		GO:0016020	membrane	A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it.
+TraesCS2D02G009100		GO:0016020	membrane	A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it.
+TraesCS5A02G332300		GO:0016020	membrane	A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it.
+TraesCSU02G039800		GO:0016020	membrane	A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it.
+TraesCSU02G039800		GO:0016021	integral component of membrane	The component of a membrane consisting of the gene products and protein complexes having at least some part of their peptide sequence embedded in the hydrophobic region of the membrane.
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0016491	oxidoreductase activity	"Catalysis of an oxidation-reduction (redox) reaction, a reversible chemical reaction in which the oxidation state of an atom or atoms within a molecule is altered. One substrate acts as a hydrogen or electron donor and becomes oxidized, while the other acts as hydrogen or electron acceptor and becomes reduced."
+TraesCS2A02G467300		GO:0016491	oxidoreductase activity	"Catalysis of an oxidation-reduction (redox) reaction, a reversible chemical reaction in which the oxidation state of an atom or atoms within a molecule is altered. One substrate acts as a hydrogen or electron donor and becomes oxidized, while the other acts as hydrogen or electron acceptor and becomes reduced."
+TraesCS2B02G109700	Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	GO:0016740	transferase activity	"Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2."
+TraesCS2B02G109700	Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	GO:0016757	"transferase activity, transferring glycosyl groups"	Catalysis of the transfer of a glycosyl group from one compound (donor) to another (acceptor).
+TraesCS5B02G561300	Cytokinin riboside 5'-monophosphate phosphoribohydrolase [Source:UniProtKB/TrEMBL;Acc:W5FJL9]	GO:0016787	hydrolase activity	"Catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3."
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0020037	heme binding	"Interacting selectively and non-covalently with heme, any compound of iron complexed in a porphyrin (tetrapyrrole) ring."
+TraesCS2D02G009100		GO:0022857	transmembrane transporter activity	"Enables the transfer of a substance, usually a specific substance or a group of related substances, from one side of a membrane to the other."
+TraesCS2D02G009100		GO:0022857	transmembrane transporter activity	"Enables the transfer of a substance, usually a specific substance or a group of related substances, from one side of a membrane to the other."
+TraesCS2A02G009300		GO:0031425	chloroplast RNA processing	The conversion of a primary RNA molecule transcribed from a chloroplast genome into one or more mature RNA molecules.
+TraesCS2D02G010200		GO:0031425	chloroplast RNA processing	The conversion of a primary RNA molecule transcribed from a chloroplast genome into one or more mature RNA molecules.
+TraesCS7B02G190700		GO:0032259	methylation	The process in which a methyl group is covalently attached to a molecule.
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0042744	hydrogen peroxide catabolic process	The chemical reactions and pathways resulting in the breakdown of hydrogen peroxide (H2O2).
+TraesCS5B02G535400		GO:0043531	ADP binding	"Interacting selectively and non-covalently with ADP, adenosine 5'-diphosphate."
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0046872	metal ion binding	Interacting selectively and non-covalently with any metal ion.
+TraesCS2B02G109700	Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	GO:0047216	inositol 3-alpha-galactosyltransferase activity	"Catalysis of the reaction: myo-inositol + UDP-galactose = O-alpha-D-galactosyl-(1,3)-1D-myo-inositol + UDP."
+TraesCS6A02G418400		GO:0050662	coenzyme binding	"Interacting selectively and non-covalently with a coenzyme, any of various nonprotein organic cofactors that are required, in addition to an enzyme and a substrate, for an enzymatic reaction to proceed."
+TraesCS2D02G009100		GO:0055085	transmembrane transport	"The process in which a solute is transported across a lipid bilayer, from one side of a membrane to the other."
+TraesCS2D02G009100		GO:0055085	transmembrane transport	"The process in which a solute is transported across a lipid bilayer, from one side of a membrane to the other."
+TraesCS5A02G332300		GO:0055085	transmembrane transport	"The process in which a solute is transported across a lipid bilayer, from one side of a membrane to the other."
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0055114	oxidation-reduction process	"A metabolic process that results in the removal or addition of one or more electrons to or from a substance, with or without the concomitant removal or addition of a proton or protons."
+TraesCS2A02G467300		GO:0055114	oxidation-reduction process	"A metabolic process that results in the removal or addition of one or more electrons to or from a substance, with or without the concomitant removal or addition of a proton or protons."
+TraesCS1D02G096400	Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	GO:0098869	cellular oxidant detoxification	Any process carried out at the cellular level that reduces or removes the toxicity superoxide radicals or hydrogen peroxide.
+TraesCS2A02G199300		GO:1900458	negative regulation of brassinosteroid mediated signaling pathway	"Any process that stops, prevents or reduces the frequency, rate or extent of brassinosteroid mediated signaling pathway."
+TraesCS2B02G456100				
+TraesCS4A02G295100				
+TraesCS4A02G295300				
+TraesCS5A02G497200				
+TraesCS5A02G497200				
+TraesCS5A02G497200				
+TraesCS5B02G535100				
+TraesCS6B02G250000				
+TraesCS6B02G408300				
+TraesCS7A02G030400				
+TraesCS7A02G415900				
+TraesCS7A02G429300				
+TraesCS7B02G002500				
+TraesCS7B02G002500				

@@ -1,0 +1,5 @@
+GO	NS	enrichment	name	ratio_in_study	ratio_in_pop	p_uncorrected	depth	study_count	p_bonferroni	p_sidak	p_holm	p_fdr_bh	study_items
+GO:0006810	BP	e	transport                     	5/54	5558/269428	0.0051	3	5	1	1	1	1	TraesCS2B02G013000, TraesCS2B02G058500, TraesCS2D02G009100, TraesCS2D02G009200, TraesCS5B02G550300
+GO:1901265	MF	e	nucleoside phosphate binding  	7/54	12483/269428	0.012	3	7	1	1	1	1	TraesCS2A02G510300, TraesCS2D02G042200, TraesCS3D02G011900, TraesCS5B02G535100, TraesCS6B02G072400, TraesCS6B02G148400, TraesCS7D02G041100
+GO:0043168	MF	e	anion binding                 	7/54	12769/269428	0.0135	3	7	1	1	1	1	TraesCS2A02G510300, TraesCS2D02G042200, TraesCS3D02G011900, TraesCS5B02G535100, TraesCS6B02G072400, TraesCS6B02G148400, TraesCS7D02G041100
+GO:0016859	MF	e	cis-trans isomerase activity  	1/54	153/269428	0.0302	3	1	1	1	1	1	TraesCS6B02G404500

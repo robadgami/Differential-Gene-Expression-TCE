@@ -1,0 +1,47 @@
+GO	NS	enrichment	name	ratio_in_study	ratio_in_pop	p_uncorrected	depth	study_count	p_bonferroni	p_sidak	p_holm	p_fdr_bh	study_items
+GO:0031425	BP	e	chloroplast RNA processing    	2/40	34/269428	1.2e-05	8	2	0.0772	0.0753	0.0772	0.0772	TraesCS2A02G009300, TraesCS2D02G010200
+GO:1900458	BP	e	negative regulation of brassinosteroid mediated signaling pathway	1/40	13/269428	0.00193	7	1	1	1	1	1	TraesCS2A02G199300
+GO:1900457	BP	e	regulation of brassinosteroid mediated signaling pathway	1/40	25/269428	0.00371	6	1	1	1	1	1	TraesCS2A02G199300
+GO:0008150	BP	e	biological_process            	14/40	44718/269428	0.00442	0	14	1	1	1	1	TraesCS1D02G096400, TraesCS2A02G009300, TraesCS2A02G031600, TraesCS2A02G199300, TraesCS2A02G467300, TraesCS2B02G109700, TraesCS2D02G009100, TraesCS2D02G010200, TraesCS5A02G332300, TraesCS5B02G535400, TraesCS5B02G561300, TraesCS6A02G149700, TraesCS7B02G190700, TraesCSU02G039800
+GO:0009691	BP	e	cytokinin biosynthetic process	1/40	35/269428	0.00518	7	1	1	1	1	1	TraesCS5B02G561300
+GO:0006012	BP	e	galactose metabolic process   	1/40	38/269428	0.00563	6	1	1	1	1	1	TraesCS2B02G109700
+GO:0009738	BP	e	abscisic acid-activated signaling pathway	1/40	43/269428	0.00636	6	1	1	1	1	1	TraesCS2A02G199300
+GO:0006541	BP	e	glutamine metabolic process   	1/40	69/269428	0.0102	9	1	1	1	1	1	TraesCS6A02G149700
+GO:0009690	BP	e	cytokinin metabolic process   	1/40	74/269428	0.0109	6	1	1	1	1	1	TraesCS5B02G561300
+GO:0006396	BP	e	RNA processing                	2/40	1110/269428	0.0119	7	2	1	1	1	1	TraesCS2A02G009300, TraesCS2D02G010200
+GO:0023057	BP	e	negative regulation of signaling	1/40	81/269428	0.012	4	1	1	1	1	1	TraesCS2A02G199300
+GO:0010648	BP	e	negative regulation of cell communication	1/40	81/269428	0.012	5	1	1	1	1	1	TraesCS2A02G199300
+GO:0034754	BP	e	cellular hormone metabolic process	1/40	81/269428	0.012	5	1	1	1	1	1	TraesCS5B02G561300
+GO:0009968	BP	e	negative regulation of signal transduction	1/40	81/269428	0.012	6	1	1	1	1	1	TraesCS2A02G199300
+GO:0042446	BP	e	hormone biosynthetic process  	1/40	95/269428	0.014	5	1	1	1	1	1	TraesCS5B02G561300
+GO:0048585	BP	e	negative regulation of response to stimulus	1/40	158/269428	0.0232	4	1	1	1	1	1	TraesCS2A02G199300
+GO:0042445	BP	e	hormone metabolic process     	1/40	159/269428	0.0233	4	1	1	1	1	1	TraesCS5B02G561300
+GO:0009064	BP	e	glutamine family amino acid metabolic process	1/40	160/269428	0.0235	8	1	1	1	1	1	TraesCS6A02G149700
+GO:0006887	BP	e	exocytosis                    	1/40	163/269428	0.0239	6	1	1	1	1	1	TraesCS2A02G031600
+GO:0032940	BP	e	secretion by cell             	1/40	172/269428	0.0252	5	1	1	1	1	1	TraesCS2A02G031600
+GO:0046903	BP	e	secretion                     	1/40	190/269428	0.0278	4	1	1	1	1	1	TraesCS2A02G031600
+GO:0009987	BP	e	cellular process              	8/40	25125/269428	0.0292	1	8	1	1	1	1	TraesCS1D02G096400, TraesCS2A02G009300, TraesCS2A02G031600, TraesCS2A02G199300, TraesCS2D02G010200, TraesCS5B02G535400, TraesCS5B02G561300, TraesCS6A02G149700
+GO:0019318	BP	e	hexose metabolic process      	1/40	228/269428	0.0333	5	1	1	1	1	1	TraesCS2B02G109700
+GO:0010817	BP	e	regulation of hormone levels  	1/40	229/269428	0.0334	3	1	1	1	1	1	TraesCS5B02G561300
+GO:0009308	BP	e	amine metabolic process       	1/40	255/269428	0.0372	4	1	1	1	1	1	TraesCS5B02G561300
+GO:0023051	BP	e	regulation of signaling       	1/40	266/269428	0.0387	3	1	1	1	1	1	TraesCS2A02G199300
+GO:0009966	BP	e	regulation of signal transduction	1/40	266/269428	0.0387	5	1	1	1	1	1	TraesCS2A02G199300
+GO:0005996	BP	e	monosaccharide metabolic process	1/40	267/269428	0.0389	4	1	1	1	1	1	TraesCS2B02G109700
+GO:0010646	BP	e	regulation of cell communication	1/40	273/269428	0.0397	4	1	1	1	1	1	TraesCS2A02G199300
+GO:0009755	BP	e	hormone-mediated signaling pathway	1/40	308/269428	0.0447	5	1	1	1	1	1	TraesCS2A02G199300
+GO:0008152	BP	e	metabolic process             	9/40	31891/269428	0.0476	1	9	1	1	1	1	TraesCS1D02G096400, TraesCS2A02G009300, TraesCS2A02G467300, TraesCS2B02G109700, TraesCS2D02G010200, TraesCS5B02G535400, TraesCS5B02G561300, TraesCS6A02G149700, TraesCS7B02G190700
+GO:0006810	BP	e	transport                     	3/40	5558/269428	0.0493	3	3	1	1	1	1	TraesCS2A02G031600, TraesCS2D02G009100, TraesCS5A02G332300
+GO:0051234	BP	e	establishment of localization 	3/40	5577/269428	0.0497	2	3	1	1	1	1	TraesCS2A02G031600, TraesCS2D02G009100, TraesCS5A02G332300
+GO:0009507	CC	e	chloroplast                   	3/40	1953/269428	0.00308	6	3	1	1	1	1	TraesCS2A02G009300, TraesCS2D02G010200, TraesCS7A02G422400
+GO:0009536	CC	e	plastid                       	3/40	2012/269428	0.00334	5	3	1	1	1	1	TraesCS2A02G009300, TraesCS2D02G010200, TraesCS7A02G422400
+GO:0044444	CC	e	cytoplasmic part              	4/40	7098/269428	0.0207	3	4	1	1	1	1	TraesCS2A02G009300, TraesCS2A02G031600, TraesCS2D02G010200, TraesCS7A02G422400
+GO:0000145	CC	e	exocyst                       	1/40	170/269428	0.0249	5	1	1	1	1	1	TraesCS2A02G031600
+GO:0044448	CC	e	cell cortex part              	1/40	179/269428	0.0262	4	1	1	1	1	1	TraesCS2A02G031600
+GO:0099023	CC	e	tethering complex             	1/40	230/269428	0.0336	2	1	1	1	1	1	TraesCS2A02G031600
+GO:0044464	CC	e	cell part                     	6/40	16810/269428	0.0364	1	6	1	1	1	1	TraesCS2A02G009300, TraesCS2A02G031600, TraesCS2A02G199300, TraesCS2D02G010200, TraesCS7A02G422400, TraesCSU02G039800
+GO:0005575	CC	e	cellular_component            	9/40	31778/269428	0.0469	0	9	1	1	1	1	TraesCS1D02G096400, TraesCS2A02G009300, TraesCS2A02G031600, TraesCS2A02G199300, TraesCS2D02G009100, TraesCS2D02G010200, TraesCS5A02G332300, TraesCS7A02G422400, TraesCSU02G039800
+GO:0035250	MF	e	UDP-galactosyltransferase activity	1/40	14/269428	0.00208	6	1	1	1	1	1	TraesCS2B02G109700
+GO:0047216	MF	e	inositol 3-alpha-galactosyltransferase activity	1/40	14/269428	0.00208	7	1	1	1	1	1	TraesCS2B02G109700
+GO:0008378	MF	e	galactosyltransferase activity	1/40	104/269428	0.0153	5	1	1	1	1	1	TraesCS2B02G109700
+GO:0008270	MF	e	zinc ion binding              	2/40	1959/269428	0.0343	6	2	1	1	1	1	TraesCS2A02G009300, TraesCS2D02G010200
+GO:0043531	MF	e	ADP binding                   	2/40	2275/269428	0.045	8	2	1	1	1	1	TraesCS5B02G535100, TraesCS5B02G535400

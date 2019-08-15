@@ -1,0 +1,76 @@
+##Databases: KEGG PATHWAY
+##Statistical test method: hypergeometric test / Fisher's exact test
+##FDR correction method: Benjamini and Hochberg
+
+#Term	Database	ID	Input number	Background number	P-Value	Corrected P-Value	Input	Hyperlink
+Metabolic pathways	KEGG PATHWAY	osa01100	33	1573	7.20099245108e-05	0.00439260539516	4347638|4326948|4334655|4334114|4326537|4342543|4347954|4337051|4325277|4324637|4343249|4347225|4347224|4337563|4328256|4326136|4352085|4326153|4335984|4333967|4328841|4340142|4328000|4334968|4328006|4336983|4329623|4324001|4332134|4328107|4339369|4330873|4337676	http://www.genome.jp/kegg-bin/show_pathway?osa01100/osa:4326948%09red/osa:4326537%09red/osa:4324001%09red/osa:4336983%09red/osa:4335984%09red/osa:4337676%09red/osa:4343249%09red/osa:4330873%09red/osa:4333967%09red/osa:4324637%09red/osa:4332134%09red/osa:4328841%09red/osa:4325277%09red/osa:4328256%09red/osa:4326136%09red/osa:4334968%09red/osa:4337563%09red/osa:4347224%09red/osa:4347225%09red/osa:4347954%09red/osa:4326153%09red/osa:4337051%09red/osa:4334655%09red/osa:4334114%09red/osa:4328107%09red/osa:4347638%09red/osa:4342543%09red/osa:4328006%09red/osa:4328000%09red/osa:4340142%09red/osa:4329623%09red/osa:4339369%09red/osa:4352085%09red
+Biosynthesis of secondary metabolites	KEGG PATHWAY	osa01110	19	848	0.00121805646199	0.0371507220907	4332134|4326948|4339369|4337051|4340142|4328841|4339236|4334968|4328107|4330873|4347225|4334114|4328006|4328256|4326136|4326153|4347224|4342543|4335984	http://www.genome.jp/kegg-bin/show_pathway?osa01110/osa:4326136%09red/osa:4326948%09red/osa:4328006%09red/osa:4330873%09red/osa:4347224%09red/osa:4347225%09red/osa:4340142%09red/osa:4326153%09red/osa:4337051%09red/osa:4339369%09red/osa:4332134%09red/osa:4328107%09red/osa:4328256%09red/osa:4335984%09red/osa:4328841%09red/osa:4334114%09red/osa:4334968%09red/osa:4339236%09red/osa:4342543%09red
+Cysteine and methionine metabolism	KEGG PATHWAY	osa00270	5	96	0.00344456007954	0.0700393882839	4340142|4347225|4347224|4347954|4330873	http://www.genome.jp/kegg-bin/show_pathway?osa00270/osa:4340142%09red/osa:4347224%09red/osa:4347225%09red/osa:4347954%09red/osa:4330873%09red
+beta-Alanine metabolism	KEGG PATHWAY	osa00410	3	32	0.00505368173024	0.0770686463862	4343249|4337046|4324637	http://www.genome.jp/kegg-bin/show_pathway?osa00410/osa:4324637%09red/osa:4343249%09red/osa:4337046%09red
+Valine, leucine and isoleucine degradation	KEGG PATHWAY	osa00280	3	40	0.00898884825821	0.10966394875	4326136|4324637|4337676	http://www.genome.jp/kegg-bin/show_pathway?osa00280/osa:4337676%09red/osa:4326136%09red/osa:4324637%09red
+Carbon metabolism	KEGG PATHWAY	osa01200	7	235	0.0110572105717	0.112414974146	4337051|4340142|4324637|4334968|4339369|4326136|4342543	http://www.genome.jp/kegg-bin/show_pathway?osa01200/osa:4326136%09red/osa:4334968%09red/osa:4340142%09red/osa:4337051%09red/osa:4324637%09red/osa:4339369%09red/osa:4342543%09red
+Galactose metabolism	KEGG PATHWAY	osa00052	3	53	0.0183732551272	0.159989457743	4347638|4324001|4339369	http://www.genome.jp/kegg-bin/show_pathway?osa00052/osa:4324001%09red/osa:4339369%09red/osa:4347638%09red
+Butanoate metabolism	KEGG PATHWAY	osa00650	2	21	0.0217790891708	0.159989457743	4326136|4336983	http://www.genome.jp/kegg-bin/show_pathway?osa00650/osa:4336983%09red/osa:4326136%09red
+Propanoate metabolism	KEGG PATHWAY	osa00640	2	22	0.0236050019621	0.159989457743	4326136|4324637	http://www.genome.jp/kegg-bin/show_pathway?osa00640/osa:4326136%09red/osa:4324637%09red
+Photosynthesis	KEGG PATHWAY	osa00195	3	70	0.0364769897519	0.222509637486	4328000|4352085|4326537	http://www.genome.jp/kegg-bin/show_pathway?osa00195/osa:4326537%09red/osa:4328000%09red/osa:4352085%09red
+Plant hormone signal transduction	KEGG PATHWAY	osa04075	5	184	0.041259376895	0.228801999145	4335058|4347000|4337372|4326775|4324749	http://www.genome.jp/kegg-bin/show_pathway?osa04075/osa:4337372%09red/osa:4324749%09red/osa:4335058%09red/osa:4347000%09red/osa:4326775%09red
+Cyanoamino acid metabolism	KEGG PATHWAY	osa00460	2	36	0.0549242147085	0.279198091435	4334114|4326948	http://www.genome.jp/kegg-bin/show_pathway?osa00460/osa:4334114%09red/osa:4326948%09red
+Arginine and proline metabolism	KEGG PATHWAY	osa00330	2	40	0.0655653519058	0.29270933617	4337046|4328006	http://www.genome.jp/kegg-bin/show_pathway?osa00330/osa:4328006%09red/osa:4337046%09red
+RNA transport	KEGG PATHWAY	osa03013	4	149	0.0671791919078	0.29270933617	4331811|4331810|4331813|4331812	http://www.genome.jp/kegg-bin/show_pathway?osa03013/osa:4331810%09red/osa:4331811%09red/osa:4331812%09red/osa:4331813%09red
+Phosphatidylinositol signaling system	KEGG PATHWAY	osa04070	2	43	0.0739569848822	0.293310303237	4333967|4333768	http://www.genome.jp/kegg-bin/show_pathway?osa04070/osa:4333768%09red/osa:4333967%09red
+Synthesis and degradation of ketone bodies	KEGG PATHWAY	osa00072	1	7	0.0769338500295	0.293310303237	4326136	http://www.genome.jp/kegg-bin/show_pathway?osa00072/osa:4326136%09red
+Terpenoid backbone biosynthesis	KEGG PATHWAY	osa00900	2	47	0.0856412085001	0.307300806971	4326136|4326153	http://www.genome.jp/kegg-bin/show_pathway?osa00900/osa:4326136%09red/osa:4326153%09red
+Brassinosteroid biosynthesis	KEGG PATHWAY	osa00905	1	9	0.0952269796003	0.314102888288	4332134	http://www.genome.jp/kegg-bin/show_pathway?osa00905/osa:4332134%09red
+Pentose phosphate pathway	KEGG PATHWAY	osa00030	2	51	0.0978353258603	0.314102888288	4339369|4342543	http://www.genome.jp/kegg-bin/show_pathway?osa00030/osa:4339369%09red/osa:4342543%09red
+Phenylpropanoid biosynthesis	KEGG PATHWAY	osa00940	3	125	0.13584961402	0.356874200967	4334114|4326948|4328841	http://www.genome.jp/kegg-bin/show_pathway?osa00940/osa:4328841%09red/osa:4334114%09red/osa:4326948%09red
+Proteasome	KEGG PATHWAY	osa03050	2	63	0.13691846855	0.356874200967	4346741|4341960	http://www.genome.jp/kegg-bin/show_pathway?osa03050/osa:4346741%09red/osa:4341960%09red
+Glyoxylate and dicarboxylate metabolism	KEGG PATHWAY	osa00630	2	63	0.13691846855	0.356874200967	4326136|4337051	http://www.genome.jp/kegg-bin/show_pathway?osa00630/osa:4326136%09red/osa:4337051%09red
+One carbon pool by folate	KEGG PATHWAY	osa00670	1	14	0.139394235133	0.356874200967	4337051	http://www.genome.jp/kegg-bin/show_pathway?osa00670/osa:4337051%09red
+Endocytosis	KEGG PATHWAY	osa04144	3	127	0.140409521692	0.356874200967	4327673|4334780|4327163	http://www.genome.jp/kegg-bin/show_pathway?osa04144/osa:4327673%09red/osa:4327163%09red/osa:4334780%09red
+Glutathione metabolism	KEGG PATHWAY	osa00480	2	73	0.171618977737	0.418750305678	4325710|4331112	http://www.genome.jp/kegg-bin/show_pathway?osa00480/osa:4331112%09red/osa:4325710%09red
+Phagosome	KEGG PATHWAY	osa04145	2	77	0.185877401352	0.42356626964	4329623|4337563	http://www.genome.jp/kegg-bin/show_pathway?osa04145/osa:4337563%09red/osa:4329623%09red
+Pyruvate metabolism	KEGG PATHWAY	osa00620	2	79	0.19306854106	0.42356626964	4326136|4334968	http://www.genome.jp/kegg-bin/show_pathway?osa00620/osa:4326136%09red/osa:4334968%09red
+Ether lipid metabolism	KEGG PATHWAY	osa00565	1	22	0.20563446178	0.42356626964	4328107	http://www.genome.jp/kegg-bin/show_pathway?osa00565/osa:4328107%09red
+Tryptophan metabolism	KEGG PATHWAY	osa00380	1	23	0.21354878612	0.42356626964	4326136	http://www.genome.jp/kegg-bin/show_pathway?osa00380/osa:4326136%09red
+Ribosome biogenesis in eukaryotes	KEGG PATHWAY	osa03008	2	86	0.218489153838	0.42356626964	4352809|4344710	http://www.genome.jp/kegg-bin/show_pathway?osa03008/osa:4352809%09red/osa:4344710%09red
+Starch and sucrose metabolism	KEGG PATHWAY	osa00500	3	159	0.21919044293	0.42356626964	4334114|4326948|4324001	http://www.genome.jp/kegg-bin/show_pathway?osa00500/osa:4324001%09red/osa:4334114%09red/osa:4326948%09red
+Lysine degradation	KEGG PATHWAY	osa00310	1	25	0.229142408166	0.42356626964	4326136	http://www.genome.jp/kegg-bin/show_pathway?osa00310/osa:4326136%09red
+Pantothenate and CoA biosynthesis	KEGG PATHWAY	osa00770	1	25	0.229142408166	0.42356626964	4343249	http://www.genome.jp/kegg-bin/show_pathway?osa00770/osa:4343249%09red
+Steroid biosynthesis	KEGG PATHWAY	osa00100	1	26	0.236823254511	0.424888780152	4328256	http://www.genome.jp/kegg-bin/show_pathway?osa00100/osa:4328256%09red
+Carotenoid biosynthesis	KEGG PATHWAY	osa00906	1	27	0.244427810774	0.426002755921	4335984	http://www.genome.jp/kegg-bin/show_pathway?osa00906/osa:4335984%09red
+Arginine biosynthesis	KEGG PATHWAY	osa00220	1	28	0.251956832303	0.426848560094	4328006	http://www.genome.jp/kegg-bin/show_pathway?osa00220/osa:4328006%09red
+RNA degradation	KEGG PATHWAY	osa03018	2	97	0.258908143008	0.426848560094	9270165|4339369	http://www.genome.jp/kegg-bin/show_pathway?osa03018/osa:4339369%09red/osa:9270165%09red
+Ubiquinone and other terpenoid-quinone biosynthesis	KEGG PATHWAY	osa00130	1	35	0.302606912412	0.462457128116	4339236	http://www.genome.jp/kegg-bin/show_pathway?osa00130/osa:4339236%09red
+Sulfur metabolism	KEGG PATHWAY	osa00920	1	35	0.302606912412	0.462457128116	4340142	http://www.genome.jp/kegg-bin/show_pathway?osa00920/osa:4340142%09red
+Pyrimidine metabolism	KEGG PATHWAY	osa00240	2	110	0.306753668722	0.462457128116	4343249|4325277	http://www.genome.jp/kegg-bin/show_pathway?osa00240/osa:4325277%09red/osa:4343249%09red
+Plant-pathogen interaction	KEGG PATHWAY	osa04626	2	112	0.314076323135	0.462457128116	4332325|4328006	http://www.genome.jp/kegg-bin/show_pathway?osa04626/osa:4328006%09red/osa:4332325%09red
+Tyrosine metabolism	KEGG PATHWAY	osa00350	1	38	0.323253576521	0.462457128116	4334655	http://www.genome.jp/kegg-bin/show_pathway?osa00350/osa:4334655%09red
+RNA polymerase	KEGG PATHWAY	osa03020	1	40	0.336678368546	0.462457128116	4325277	http://www.genome.jp/kegg-bin/show_pathway?osa03020/osa:4325277%09red
+Fatty acid degradation	KEGG PATHWAY	osa00071	1	41	0.343290881147	0.462457128116	4326136	http://www.genome.jp/kegg-bin/show_pathway?osa00071/osa:4326136%09red
+Biosynthesis of amino acids	KEGG PATHWAY	osa01230	3	207	0.348054496561	0.462457128116	4340142|4339369|4342543	http://www.genome.jp/kegg-bin/show_pathway?osa01230/osa:4339369%09red/osa:4340142%09red/osa:4342543%09red
+Glycolysis / Gluconeogenesis	KEGG PATHWAY	osa00010	2	123	0.353989169595	0.462457128116	4334968|4339369	http://www.genome.jp/kegg-bin/show_pathway?osa00010/osa:4334968%09red/osa:4339369%09red
+Alanine, aspartate and glutamate metabolism	KEGG PATHWAY	osa00250	1	43	0.356319426581	0.462457128116	4336983	http://www.genome.jp/kegg-bin/show_pathway?osa00250/osa:4336983%09red
+Inositol phosphate metabolism	KEGG PATHWAY	osa00562	1	47	0.381608600151	0.484960929359	4333967	http://www.genome.jp/kegg-bin/show_pathway?osa00562/osa:4333967%09red
+Oxidative phosphorylation	KEGG PATHWAY	osa00190	2	137	0.403534589425	0.49520684797	4329623|4337563	http://www.genome.jp/kegg-bin/show_pathway?osa00190/osa:4337563%09red/osa:4329623%09red
+Citrate cycle (TCA cycle)	KEGG PATHWAY	osa00020	1	51	0.405907252434	0.49520684797	4334968	http://www.genome.jp/kegg-bin/show_pathway?osa00020/osa:4334968%09red
+Glycine, serine and threonine metabolism	KEGG PATHWAY	osa00260	1	57	0.440582196227	0.523382269535	4337051	http://www.genome.jp/kegg-bin/show_pathway?osa00260/osa:4337051%09red
+Fructose and mannose metabolism	KEGG PATHWAY	osa00051	1	58	0.446161934686	0.523382269535	4339369	http://www.genome.jp/kegg-bin/show_pathway?osa00051/osa:4339369%09red
+Fatty acid metabolism	KEGG PATHWAY	osa01212	1	68	0.498997022058	0.574317327275	4326136	http://www.genome.jp/kegg-bin/show_pathway?osa01212/osa:4326136%09red
+Glycerophospholipid metabolism	KEGG PATHWAY	osa00564	1	71	0.513844908158	0.58045443329	4328107	http://www.genome.jp/kegg-bin/show_pathway?osa00564/osa:4328107%09red
+Carbon fixation in photosynthetic organisms	KEGG PATHWAY	osa00710	1	73	0.523498986497	0.580607966842	4342543	http://www.genome.jp/kegg-bin/show_pathway?osa00710/osa:4342543%09red
+Spliceosome	KEGG PATHWAY	osa03040	2	185	0.557264083767	0.607019805532	4347019|4347985	http://www.genome.jp/kegg-bin/show_pathway?osa03040/osa:4347019%09red/osa:4347985%09red
+Protein processing in endoplasmic reticulum	KEGG PATHWAY	osa04141	2	189	0.568749261479	0.608661490355	4343386|4334781	http://www.genome.jp/kegg-bin/show_pathway?osa04141/osa:4334781%09red/osa:4343386%09red
+Amino sugar and nucleotide sugar metabolism	KEGG PATHWAY	osa00520	1	111	0.674576819412	0.704133638857	4347638	http://www.genome.jp/kegg-bin/show_pathway?osa00520/osa:4347638%09red
+Aminoacyl-tRNA biosynthesis	KEGG PATHWAY	osa00970	1	113	0.681047290042	0.704133638857	4326551	http://www.genome.jp/kegg-bin/show_pathway?osa00970/osa:4326551%09red
+Purine metabolism	KEGG PATHWAY	osa00230	1	130	0.731115922663	0.743301188041	4325277	http://www.genome.jp/kegg-bin/show_pathway?osa00230/osa:4325277%09red
+Ribosome	KEGG PATHWAY	osa03010	1	337	0.966635666567	0.966635666567	4339011	http://www.genome.jp/kegg-bin/show_pathway?osa03010/osa:4339011%09red
+
+--------------------
+
+#Term	Database	ID	Input number	Background number	P-Value	Corrected P-Value	Input	Hyperlink
+
+--------------------
+
+#Term	Database	ID	Input number	Background number	P-Value	Corrected P-Value	Input	Hyperlink
+
+--------------------

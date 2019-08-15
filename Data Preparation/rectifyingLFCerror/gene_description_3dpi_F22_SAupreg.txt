@@ -1,0 +1,46 @@
+Gene stable ID	Gene name	Gene description	Oryza sativa Japonica Group gene stable ID	Oryza sativa Japonica Group gene name	OSJ DESCRIPTION	%id. target Oryza sativa Japonica Group gene identical to query gene	%id. query gene identical to target Oryza sativa Japonica Group gene	Arabidopsis thaliana gene stable ID	Arabidopsis thaliana gene name	AT DESCRIPTION	%id. target Arabidopsis thaliana gene identical to query gene	%id. query gene identical to target Arabidopsis thaliana gene
+TraesCS1D02G096400		Peroxidase [Source:UniProtKB/TrEMBL;Acc:W5AL94]	Os10g0109300		Similar to Peroxidase (EC 1.11.1.7)	67.3529	68.1548	AT5G19880	PER58	Peroxidase 58 [Source:UniProtKB/Swiss-Prot;Acc:P59120]	48.2353	49.848
+TraesCS2A02G009300			Os04g0118700		Pentatricopeptide repeat domain containing protein	75.644	75.4673	AT3G57430	PCMP-H81	"Pentatricopeptide repeat-containing protein At3g57430, chloroplastic [Source:UniProtKB/Swiss-Prot;Acc:Q7Y211]"	50.3513	48.3146
+TraesCS2A02G031600		Exocyst subunit Exo70 family protein [Source:UniProtKB/TrEMBL;Acc:A0A1D5TPS0]										
+TraesCS2A02G199300			Os07g0569100		"Remorin protein, Coordination of interlink between abscisic acid (ABA) and brassinosteroid (BR) signaling"	71.3826	70.2532	AT3G57540		Remorin 4.1 [Source:UniProtKB/Swiss-Prot;Acc:Q93YN8]	37.6206	39.527
+TraesCS2A02G199300			Os07g0569100		"Remorin protein, Coordination of interlink between abscisic acid (ABA) and brassinosteroid (BR) signaling"	71.3826	70.2532	AT2G41870		Remorin 4.2 [Source:UniProtKB/Swiss-Prot;Acc:P93758]	36.6559	41.6058
+TraesCS2A02G467300			Os04g0623300		"Polyamine oxidase, Seed germination"	94.4215	94.4215	AT3G59050	PAO3	AT3G59050	69.8347	69.2623
+TraesCS2A02G467300			Os04g0623300		"Polyamine oxidase, Seed germination"	94.4215	94.4215	AT2G43020	PAO2	Probable polyamine oxidase 2 [Source:UniProtKB/Swiss-Prot;Acc:Q9SKX5]	71.0744	70.2041
+TraesCS2B02G109700		Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	Os07g0687900		WSI76 protein induced by water stress	81.9876	80.4878	AT1G60470	GOLS4	Galactinol synthase 4 [Source:UniProtKB/Swiss-Prot;Acc:O22693]	72.6708	70.0599
+TraesCS2B02G109700		Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	Os07g0687900		WSI76 protein induced by water stress	81.9876	80.4878	AT2G47180	GOLS1	Galactinol synthase 1 [Source:UniProtKB/Swiss-Prot;Acc:O22893]	73.2919	68.6047
+TraesCS2B02G109700		Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	Os07g0687900		WSI76 protein induced by water stress	81.9876	80.4878	AT5G23790	GOLS5	Galactinol synthase 5 [Source:UniProtKB/Swiss-Prot;Acc:Q9FFA1]	62.1118	60.0601
+TraesCS2B02G109700		Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	Os07g0687900		WSI76 protein induced by water stress	81.9876	80.4878	AT1G56600	GOLS2	Galactinol synthase 2 [Source:UniProtKB/Swiss-Prot;Acc:Q9FXB2]	72.0497	69.2537
+TraesCS2B02G109700		Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	Os07g0687900		WSI76 protein induced by water stress	81.9876	80.4878	AT4G26250	GOLS6	Galactinol synthase 6 [Source:UniProtKB/Swiss-Prot;Acc:Q8H1S1]	64.2857	61.6071
+TraesCS2B02G109700		Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	Os07g0687900		WSI76 protein induced by water stress	81.9876	80.4878	AT5G30500	GOLS10	Galactinol synthase 10 [Source:UniProtKB/Swiss-Prot;Acc:F4KED2]	63.0435	61.8902
+TraesCS2B02G109700		Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	Os07g0687900		WSI76 protein induced by water stress	81.9876	80.4878	AT1G09350	GOLS3	Hexosyltransferase (Fragment) [Source:UniProtKB/TrEMBL;Acc:W8PVD7]	70.8075	68.2635
+TraesCS2B02G109700		Hexosyltransferase [Source:UniProtKB/TrEMBL;Acc:W5BPL7]	Os07g0687900		WSI76 protein induced by water stress	81.9876	80.4878	AT1G60450	GOLS7	Galactinol synthase 7 [Source:UniProtKB/Swiss-Prot;Acc:Q4PSY4]	65.8385	63.8554
+TraesCS2B02G456100			Os04g0603200		Similar to C-terminal zinc-finger (Fragment)	54.6917	62.0061	AT5G10650		At5g10650 [Source:UniProtKB/TrEMBL;Acc:Q5XEP8]	29.4906	20.9524
+TraesCS2B02G456100			Os04g0603200		Similar to C-terminal zinc-finger (Fragment)	54.6917	62.0061	AT4G31450		AT4g31450/F3L17_20 [Source:UniProtKB/TrEMBL;Acc:Q944Q9]	28.1501	21.1268
+TraesCS2B02G456100			Os04g0603200		Similar to C-terminal zinc-finger (Fragment)	54.6917	62.0061	AT5G24870		At5g24870 [Source:UniProtKB/TrEMBL;Acc:Q8L775]	30.0268	21.5385
+TraesCS2D02G009100												
+TraesCS2D02G010200			Os04g0118700		Pentatricopeptide repeat domain containing protein	76.2295	76.0514	AT3G57430	PCMP-H81	"Pentatricopeptide repeat-containing protein At3g57430, chloroplastic [Source:UniProtKB/Swiss-Prot;Acc:Q7Y211]"	50.3513	48.3146
+TraesCS3D02G504400												
+TraesCS4A02G295100			Os03g0665700		Similar to predicted protein	89.7436	88.983					
+TraesCS4A02G295300			Os03g0665200		Protein of unknown function DUF581 family protein	73.2441	72.5166					
+TraesCS4D02G208300			Os03g0275300		Hypothetical conserved gene	85.3982	83.0107	AT2G28840	XBAT31	Putative E3 ubiquitin-protein ligase XBAT31 [Source:UniProtKB/Swiss-Prot;Acc:Q94B55]	56.4159	55.9211
+TraesCS5A02G332300			Os09g0541000		Similar to Aquaporin 2	79.7251	80					
+TraesCS5A02G497200			Os03g0130700		Conserved hypothetical protein	56.5128	58.617	AT2G17550		unknown protein; Ha. [Source:TAIR;Acc:AT2G17550]	23.6923	29.6534
+TraesCS5B02G535100												
+TraesCS5B02G535400												
+TraesCS5B02G561300		Cytokinin riboside 5'-monophosphate phosphoribohydrolase [Source:UniProtKB/TrEMBL;Acc:W5FJL9]	Os03g0857900		Similar to Lysine decarboxylase-like protein	70	71.1382	AT2G35990	LOG2	AT2G35990	56	65.7277
+TraesCS6A02G149700			Os02g0179200		Glutamine amidotransferase class-I domain containing protein	60.0683	58.8629	AT2G23970	GGP5	Gamma-glutamyl peptidase 5 [Source:UniProtKB/Swiss-Prot;Acc:O82225]	39.5904	46.2151
+TraesCS6A02G149700			Os02g0179200		Glutamine amidotransferase class-I domain containing protein	60.0683	58.8629	AT4G30540	GGP2	Gamma-glutamyl peptidase 2 [Source:UniProtKB/Swiss-Prot;Acc:Q9M0A6]	36.1775	42.7419
+TraesCS6A02G149700			Os02g0179200		Glutamine amidotransferase class-I domain containing protein	60.0683	58.8629	AT4G30550	GGP3	GGP3 [Source:UniProtKB/TrEMBL;Acc:A0A178V361]	36.8601	43.3735
+TraesCS6A02G149700			Os02g0179200		Glutamine amidotransferase class-I domain containing protein	60.0683	58.8629	AT2G23960	GGP4	Gamma-glutamyl peptidase 4 [Source:UniProtKB/Swiss-Prot;Acc:F4INN2]	36.8601	43.0279
+TraesCS6A02G149700			Os02g0179200		Glutamine amidotransferase class-I domain containing protein	60.0683	58.8629	AT4G30530	GGP1	GGP1 [Source:UniProtKB/TrEMBL;Acc:A0A178V143]	34.8123	40.8
+TraesCS6A02G418400			Os02g0834700		Similar to Cell division inhibitor	69.3989	70.7521	AT2G21280	GC1	NAD(P)-binding Rossmann-fold superfamily protein [Source:TAIR;Acc:AT2G21280]	59.0164	59.6685
+TraesCS6B02G250000			Os02g0612900		Similar to Temperature stress-induced lipocalin	85.2632	83.0769	AT5G58070	TIL	TIL [Source:UniProtKB/TrEMBL;Acc:A0A178US04]	71.0526	72.5806
+TraesCS6B02G408300			Os02g0827600		Protein of unknown function DUF3531 domain containing protein	77.9359	79.3478	AT5G08400		At5g08400/F8L15_130 [Source:UniProtKB/TrEMBL;Acc:Q8VZD1]	64.0569	54.0541
+TraesCS7A02G030400												
+TraesCS7A02G415900												
+TraesCS7A02G422400			Os06g0699500		Tautomerase domain containing protein	83.4783	83.4783	AT5G57170		Tautomerase/MIF superfamily protein [Source:UniProtKB/TrEMBL;Acc:F4KAK0]	56.5217	56.0345
+TraesCS7A02G429300			Os06g0694400		Conserved hypothetical protein	65	64.1975					
+TraesCS7B02G002500			Os02g0261400		Conserved hypothetical protein	14.5985	29.4118					
+TraesCS7B02G002500			Os02g0263432		Conserved hypothetical protein	29.562	36.5964					
+TraesCS7B02G190700												
+TraesCSU02G039800			Os01g0109750		Paired amphipathic helix domain containing protein	54.7872	75.1825					
