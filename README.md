@@ -10,7 +10,6 @@ The project can be split into 4 parts:
 4. Expression in 13/14 - to observe how the expression of underlying genes change upon 13/14 infection.
 
 
-
 ## 1. Data Preparation
 
 ### 1.1 Clean Reads
